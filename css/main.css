@@ -1,0 +1,72 @@
+html, body {
+  margin: 0 auto;
+  padding: 0 !important;
+  position: relative;
+  background-color: white;
+  font-size: 9pt;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+  width: 100% !important;
+  display: inline-block;
+  height: 100%;
+}
+
+a:link {
+  color: #5e7d93;
+  text-decoration: none;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: 9pt;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  color: #5e7d93;
+  list-style-type: square;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #5e7d93;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Bold, gold header. */
+h1 {
+  color: #cca80c;
+  font-size: 13pt;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Bold, black header. */
+h2 {
+  font-size: 12pt;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Large, normal-weight header. */
+h3 {
+  font-size: 15pt;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: lighter;
+}
+
+.blog-footer {
+  background-color: #e3ecf2;
+  border-bottom: 1px solid #5e7d93;
+  border-top: 1px solid #5e7d93;
+  padding: 13px 50px 13px 13px !important;
+  height: 25px;
+}
+
+.blog-header {
+
+}
