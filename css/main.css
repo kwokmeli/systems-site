@@ -9,6 +9,7 @@ html, body {
   width: 100% !important;
   display: inline-block;
   height: 100%;
+  text-decoration: none;
 }
 
 a:link {
@@ -18,22 +19,13 @@ a:link {
   font-size: 9pt;
 }
 
-p {
-  margin: 0;
-  padding: 0;
+input#searchsubmit {
+  color: #5e7d93;
 }
 
 ul {
   color: #5e7d93;
   list-style-type: square;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: #5e7d93;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 /* Bold, gold header. */
@@ -59,14 +51,64 @@ h3 {
   font-weight: lighter;
 }
 
+/* Body text. */
+h4 {
+  font-size: 9pt;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: lighter;
+}
+
+
 .blog-footer {
   background-color: #e3ecf2;
   border-bottom: 1px solid #5e7d93;
   border-top: 1px solid #5e7d93;
   padding: 13px 50px 13px 13px !important;
-  height: 25px;
+  height: 33px;
+  text-align: center;
 }
 
-.blog-header {
+.blog-footer a {
+  font-size: 8pt;
+  text-decoration: none;
+  color: #5e7d93;
+  border-bottom: none;
+}
 
+.blog-footer a:hover {
+  border-bottom: 1px solid #5e7d93;
+}
+
+.blog-title {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none !important;
+}
+
+.blog-title a {
+  text-decoration: none !important;
+  font-size: 20pt;
+  color: #5e7d93;
+}
+
+.blog-title a:visited {
+  text-decoration: none !important;
+  color: #5e7d93;
+}
+
+.line {
+  border-bottom: 1px solid #5e7d93;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+
+.search-box {
+  float: right;
+  margin-right: 20px;
+  margin-top: -20px;
+  font-size: 8pt;
+  color: #5e7d93;
 }
