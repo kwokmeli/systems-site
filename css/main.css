@@ -1,4 +1,4 @@
-html, body {
+/*html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,12 +10,27 @@ html, body {
   display: inline-block;
   height: 100%;
   text-decoration: none;
+}*/
+
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: 'Karla', sans-serif;
+  background-color: white;
+  font-size: 14pt;
 }
 
 a:link {
@@ -43,45 +58,45 @@ ul {
 h1 {
   color: #cca80c;
   font-size: 18pt;
-  margin-top: -60px;
+  margin-top: -65px;
   margin-left: 33px;
   font-weight: lighter;
 }
 
 /* Bold, black header. */
-h2 {
+/*h2 {
   font-size: 12pt;
   margin-left: 20px;
   margin-right: 20px;
-}
+}*/
 
 /* Large, normal-weight header */
-h3 {
+/*h3 {
   font-size: 15pt;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: lighter;
-}
+}*/
 
 /* Body text */
-h4 {
+/*h4 {
   font-size: 9pt;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: lighter;
-}
+}*/
 
-.holder {
+/*.holder {
   min-height: 100%;
   position: relative;
-}
+}*/
 
 /* Styles the home page buttons */
 .front-page-button {
   border-style: solid;
   border-width: 1px;
   border-color: #F2F2F2;
-  border-left: 4px solid #5e7d93;
+  border-left: 3px solid #5e7d93;
   width: 50%;
   height: 40px;
   line-height: 40px;
@@ -94,7 +109,7 @@ h4 {
 }
 
 .front-page-button:hover {
-  border-left: 4px solid #ced8de;
+  border-left: 3px solid #ced8de;
 }
 
 .front-page-button a {
@@ -121,22 +136,17 @@ h4 {
   /*border-bottom: 1px solid #5e7d93;
   border-top: 1px solid #5e7d93;*/
   padding: 13px 50px 13px 13px !important;
-  height: 95px;
+  height: 125px;
 }
 
 /* Styles the footer */
 .blog-footer {
-  background-color: #e3ecf2;
-  /*border-bottom: 1px solid #5e7d93;
-  border-top: 1px solid #5e7d93;*/
-  bottom: 0;
   position: absolute;
-  width: 100%;
-  /*padding: 13px 50px 13px 13px !important;*/
-  overflow: hidden;
-  padding-top: 25px;
+  right: 0;
   bottom: 0;
-  height: 50px;
+  left: 0;
+  padding: 1rem;
+  background-color: #e3ecf2;
   text-align: center;
 }
 
@@ -193,10 +203,3 @@ h4 {
 /* Styles page that appears when no search results are found */
 .no-results {
 }
-
-/* TODO: Update the max-height value if you increase the number of homepage menu items */
-/*@media screen and (max-height: 666px) {
-  .blog-footer {
-    position: relative;
-  }
-}*/
