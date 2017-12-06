@@ -1,15 +1,21 @@
 html, body {
-  margin: 0 auto;
-  padding: 0 !important;
-  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   background-color: white;
-  font-size: 9pt;
-  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14pt;
+  font-family: 'Karla', sans-serif;
   color: black;
   width: 100% !important;
   display: inline-block;
   height: 100%;
   text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 a:link {
@@ -18,6 +24,11 @@ a:link {
   border-bottom: 1px solid #c4c4c4;
   font-size: 9pt;
 }
+
+/*#body {
+  padding: 10px;
+  padding-bottom: 33px;
+}*/
 
 input#searchsubmit {
   color: #5e7d93;
@@ -28,12 +39,13 @@ ul {
   list-style-type: square;
 }
 
-/* Bold, gold header. */
+/* Bold, gold header. Only used for sub-headers within the header. */
 h1 {
   color: #cca80c;
-  font-size: 13pt;
-  margin-left: 40px;
-  margin-right: 40px;
+  font-size: 18pt;
+  margin-top: -60px;
+  margin-left: 33px;
+  font-weight: lighter;
 }
 
 /* Bold, black header. */
@@ -43,7 +55,7 @@ h2 {
   margin-right: 20px;
 }
 
-/* Large, normal-weight header. */
+/* Large, normal-weight header */
 h3 {
   font-size: 15pt;
   margin-left: 20px;
@@ -51,7 +63,7 @@ h3 {
   font-weight: lighter;
 }
 
-/* Body text. */
+/* Body text */
 h4 {
   font-size: 9pt;
   margin-left: 20px;
@@ -59,13 +71,72 @@ h4 {
   font-weight: lighter;
 }
 
+.holder {
+  min-height: 100%;
+  position: relative;
+}
 
+/* Styles the home page buttons */
+.front-page-button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #F2F2F2;
+  border-left: 4px solid #5e7d93;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 1px #E4E4E4;
+  color: #5e7d93;
+}
+
+.front-page-button:hover {
+  border-left: 4px solid #ced8de;
+}
+
+.front-page-button a {
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 14pt;
+  color: #5e7d93;
+}
+
+.front-page-button a:visited {
+  text-decoration: none;
+  border-bottom: none;
+  color: #5e7d93;
+}
+
+/* Keeps home page buttons centered in IE6 */
+.front-page-button-layout-ie {
+  text-align: center;
+}
+
+/* Styles the header */
+.blog-header {
+  background-color: #e3ecf2;
+  /*border-bottom: 1px solid #5e7d93;
+  border-top: 1px solid #5e7d93;*/
+  padding: 13px 50px 13px 13px !important;
+  height: 95px;
+}
+
+/* Styles the footer */
 .blog-footer {
   background-color: #e3ecf2;
-  border-bottom: 1px solid #5e7d93;
-  border-top: 1px solid #5e7d93;
-  padding: 13px 50px 13px 13px !important;
-  height: 33px;
+  /*border-bottom: 1px solid #5e7d93;
+  border-top: 1px solid #5e7d93;*/
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  /*padding: 13px 50px 13px 13px !important;*/
+  overflow: hidden;
+  padding-top: 25px;
+  bottom: 0;
+  height: 50px;
   text-align: center;
 }
 
@@ -74,10 +145,12 @@ h4 {
   text-decoration: none;
   color: #5e7d93;
   border-bottom: none;
+  text-align: center;
 }
 
 .blog-footer a:hover {
   border-bottom: 1px solid #5e7d93;
+  text-align: center;
 }
 
 .blog-title {
@@ -85,9 +158,11 @@ h4 {
   margin-left: 20px;
   margin-right: 20px;
   text-decoration: none !important;
+  font-weight: bold;
 }
 
 .blog-title a {
+  border-bottom: none !important;
   text-decoration: none !important;
   font-size: 20pt;
   color: #5e7d93;
@@ -98,6 +173,7 @@ h4 {
   color: #5e7d93;
 }
 
+/* Styles lines used for breaks between paragraphs */
 .line {
   border-bottom: 1px solid #5e7d93;
   margin-left: 20px;
@@ -105,10 +181,22 @@ h4 {
   margin-top: -10px;
 }
 
+/* Styles search box */
 .search-box {
   float: right;
-  margin-right: 20px;
-  margin-top: -20px;
+  margin-top: -23px;
   font-size: 8pt;
+  font-family: 'Karla', sans-serif;
   color: #5e7d93;
 }
+
+/* Styles page that appears when no search results are found */
+.no-results {
+}
+
+/* TODO: Update the max-height value if you increase the number of homepage menu items */
+/*@media screen and (max-height: 666px) {
+  .blog-footer {
+    position: relative;
+  }
+}*/
