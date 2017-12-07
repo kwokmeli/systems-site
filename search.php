@@ -1,40 +1,26 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package Shape
- * @since Shape 1.0
- */
+<?php get_header(); ?>
+    <h1>Search Results</h1>
 
-get_header(); ?>
+<?php if ( have_posts() ) : ?>
+    <h2>Search results for query: "<?php the_search_query(); ?>"</h2>
+	<?php
+	while ( have_posts() ) : the_post(); ?>
 
-        <section id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">
 
-            <?php if ( have_posts() ) : ?>
+			<?php if ( has_post_thumbnail() ) { ?>
 
-                <header class="page-header">
-                    <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-                </header><!-- .page-header -->
+			<?php } ?>
+            <a href="<?php the_permalink() ?>"><?php the_title('<h3>', '</h3>') ?></a>
 
-                <?php shape_content_nav( 'nav-above' ); ?>
+				<h5><?php echo get_the_excerpt() ?></h5>
 
-                <?php /* Start the Loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+	<?php endwhile;
 
-                    <?php get_template_part( 'content', 'search' ); ?>
+else :
+	echo '<h4>No search results were found.</h4>';
 
-                <?php endwhile; ?>
+endif;
 
-                <?php shape_content_nav( 'nav-below' ); ?>
+get_footer();
 
-            <?php else : ?>
-
-                <?php get_template_part( 'no-results', 'search' ); ?>
-
-            <?php endif; ?>
-
-            </div><!-- #content .site-content -->
-        </section><!-- #primary .content-area -->
-
-<?php get_footer(); ?>
+?>
