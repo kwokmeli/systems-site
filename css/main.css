@@ -30,7 +30,7 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: 'Karla', sans-serif;
-  background-color: white;
+  background-color: #f9f9f9;
   font-size: 14pt;
 }
 
@@ -135,6 +135,7 @@ h5 {
 
 /* Styles the home page buttons */
 .front-page-button {
+  background-color: white;
   border-style: solid;
   border-width: 1px;
   border-color: #F2F2F2;
@@ -174,22 +175,57 @@ h5 {
 
 /* Styles the header */
 .blog-header {
-  background-color: #e3ecf2;
+  /*background-color: #e3ecf2;*/
+  background-color: white;
   /*border-bottom: 1px solid #5e7d93;
   border-top: 1px solid #5e7d93;*/
+  /*border-top: 5px solid #5e7d93;*/
+  box-shadow: 1px 1px 1px #e9e9e9;
   padding: 13px 50px 13px 13px !important;
   height: 125px;
 }
 
+.header-1 {
+  height: 5px;
+  background-color: #5e7d93;
+  width: 25%;
+}
+
+.header-2 {
+  height: 5px;
+  background-color: #7e97a8;
+  width: 25%;
+  margin-left: 25%;
+  margin-top: -5px;
+}
+
+.header-3 {
+  height: 5px;
+  background-color: #9eb1be;
+  width: 25%;
+  margin-left: 50%;
+  margin-top: -5px;
+}
+
+.header-4 {
+  height: 5px;
+  background-color: #becbd3;
+  width: 25%;
+  margin-left: 75%;
+  margin-top: -5px;
+}
+
 /* Styles the footer */
 .blog-footer {
+  box-shadow: 1px 1px 1px #e9e9e9;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #e3ecf2;
+  /*background-color: #e3ecf2;*/
   text-align: center;
+  background-color: white;
 }
 
 .blog-footer a {
@@ -239,7 +275,11 @@ h5 {
   margin-top: -23px;
   font-size: 8pt;
   font-family: 'Karla', sans-serif;
-  color: #5e7d93;
+  border-radius: 10px;
+  border: 1px solid #e9e9e9;
+  /*color: #5e7d93;*/
+  height: 35px;
+  padding: 4px;
 }
 
 /* Styles page that appears when no search results are found */
@@ -248,14 +288,16 @@ h5 {
 
 /* Styles the search submit button for the search bar */
 #searchsubmit {
-  background-color: #5e7d93;
+  /*background-color: #5e7d93;*/
   height: 20px;
   width: 20px;
-  padding: 4px;
+  padding: 3px;
+  margin-top: 3px;
 }
 
 /* Styles the text-input of the search bar */
 #s {
+  margin-top: 3px;
   font-family: 'Karla', sans-serif;
   height: 20px;
   border: none;
