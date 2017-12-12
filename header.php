@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/ss-logo.png">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
