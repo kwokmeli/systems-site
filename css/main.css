@@ -59,7 +59,7 @@ ul {
 h1 {
   color: #cca80c;
   font-size: 18pt;
-  margin-top: -65px;
+  margin-top: -62px;
   margin-left: 33px;
   font-weight: lighter;
 }
@@ -385,23 +385,64 @@ h5 {
   top: 48px;
 }
 
+/* Used to keep maximum number of columns as 3; shrinks to 2 columns when window is less than 786px wide */
 @media (max-width: 786px) {
  .home-wrapper {
    width: 500px;
  }
-
- /*.container {
-   width: 500px;
- }*/
-
 }
 
+@media (max-width: 783px) {
+  .blog-title a {
+    font-size: 16pt;
+  }
+
+  h1 {
+    font-size: 14pt;
+  }
+}
+
+@media (max-width: 671px) {
+  .blog-title a {
+    font-size: 14pt;
+  }
+
+  h1 {
+    font-size: 12pt;
+    margin-top: -69px;
+  }
+}
+
+@media (max-width: 626px) {
+  .blog-title a {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 10pt;
+    margin-top: -73px;
+  }
+}
+
+/* Used to keep maximum number of columns as 3; shrinks to 1 column when window is less that 587px wide */
 @media (max-width: 587px) {
   .home-wrapper {
     width: 300px;
   }
+}
 
-  /*.container {
-    width: 300px;
-  }*/
+@media (max-width: 551px) {
+  .blog-title {
+    width: 200px;
+  }
+
+  h1 {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 481px) {
+  .blog-title {
+    width: 150px;
+  }
 }
