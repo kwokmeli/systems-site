@@ -147,23 +147,96 @@ h5 {
 
 /* Styles the home page buttons */
 .front-page-button {
+  position: relative;
   background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #F2F2F2;
-  border-left: 3px solid #5e7d93;
+  border: 1px solid #F2F2F2;
   height: 200px;
   width: 200px;
   display: inline-block;
   box-shadow: 1px 1px 1px #E4E4E4;
-  color: #5e7d93;
-  text-align: center;
-  line-height: 200px;
   margin: 15px 15px 15px 15px;
 }
 
+.container {
+  display: inline-block;
+  margin: 15px 15px 15px 15px;
+  box-shadow: 1px 1px 1px #E4E4E4;
+  border: 1px solid #F2F2F2;
+  background-color: white;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.container a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.container a:visited {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.container img {
+  position: relative;
+  margin-top: 33.33%;
+  left: 0 auto;
+  right: 0 auto;
+  max-height: 33.33%;
+  max-width: 33.33%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5e7d93;
+}
+
+.overlay a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.overlay a:visited {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 20pt;
+}
+
+.text a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.text a:visited {
+  text-decoration: none !important;
+  border: none !important;
+}
+
 .front-page-button:hover {
-  border-left: 3px solid #ced8de;
+  /*border-left: 3px solid #ced8de;*/
+
 }
 
 /* Keeps home page buttons centered in IE6 */
@@ -316,10 +389,19 @@ h5 {
  .home-wrapper {
    width: 500px;
  }
+
+ /*.container {
+   width: 500px;
+ }*/
+
 }
 
 @media (max-width: 587px) {
   .home-wrapper {
     width: 300px;
   }
+
+  /*.container {
+    width: 300px;
+  }*/
 }
