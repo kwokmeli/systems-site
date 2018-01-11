@@ -17,7 +17,7 @@
 	<?php endwhile;
 
 else :
-	echo '<h4>No search results were found.</h4>';
+	echo '<h6>No search results were found.</h6>';
 
 endif;
 
