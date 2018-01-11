@@ -1,3 +1,4 @@
+<div class="body">
 <?php get_header(); ?>
     <h1>Search Results</h1>
 
@@ -24,3 +25,4 @@ endif;
 get_footer();
 
 ?>
+</div>

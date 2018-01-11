@@ -1,17 +1,3 @@
-/*html, body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-size: 14pt;
-  font-family: 'Karla', sans-serif;
-  color: black;
-  width: 100% !important;
-  display: inline-block;
-  height: 100%;
-  text-decoration: none;
-}*/
-
 html {
   height: 100%;
   box-sizing: border-box;
@@ -24,7 +10,6 @@ html {
 }
 
 body {
-  /*margin-top: 30px;*/
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
@@ -40,11 +25,6 @@ a:link {
   border-bottom: 1px solid #c4c4c4;
   font-size: 9pt;
 }
-
-/*#body {
-  padding: 10px;
-  padding-bottom: 33px;
-}*/
 
 input#searchsubmit {
   color: #5e7d93;
@@ -97,7 +77,6 @@ h4 {
   font-size: 12pt;
   margin-left: 35px;
   margin-right: 35px;
-  /*margin-bottom: 50px;*/
   font-weight: lighter;
 }
 
@@ -134,7 +113,6 @@ h6 {
   margin-left: 35px !important;
   margin-right: 35px;
   margin-top: 50px;
-  /*margin-bottom: 50px;*/
   font-weight: lighter;
 }
 
@@ -191,7 +169,8 @@ h6 {
 }
 
 .sub-menu-button:hover > .sub-menu-button-text {
-  border-right: 4px solid #ced8de;
+  /* border-right: 4px solid #ced8de; */
+  border-right: 4px solid #cca80c;
   color: #8ea4b3;
 }
 
@@ -381,13 +360,13 @@ h6 {
 
 /* Styles search box */
 .search-box {
+  margin-right: -22px;
   float: right;
   margin-top: -23px;
   font-size: 8pt;
   font-family: 'Karla', sans-serif;
   border-radius: 10px;
   border: 1px solid #e9e9e9;
-  /*color: #5e7d93;*/
   height: 35px;
   padding: 4px;
 }
