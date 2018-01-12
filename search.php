@@ -3,7 +3,7 @@
     <h1>Search Results</h1>
 
 <?php if ( have_posts() ) : ?>
-    <h2>Search results for query: "<?php the_search_query(); ?>"</h2>
+    <h2>Search results for query "<?php the_search_query(); ?>"</h2>
 	<?php
 	while ( have_posts() ) : the_post(); ?>
 
@@ -17,10 +17,11 @@
 
 	<?php endwhile;
 
-else :
-	echo '<h6>No search results were found.</h6>';
+else : ?>
 
-endif;
+  <h6>No search results were found for query "<?php the_search_query(); ?>".</h6>
+
+<?php endif;
 
 get_footer();
 

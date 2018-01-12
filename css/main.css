@@ -116,6 +116,7 @@ h6 {
   font-weight: lighter;
 }
 
+/* Wraps around all homepage buttons; makes sure that there are no more than 3 buttons per row */
 .home-wrapper {
   width: 700px;
 }
