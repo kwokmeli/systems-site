@@ -49,5 +49,5 @@ To add a sub-menu button, navigate to "Edit Page" for the page you wish to add t
 ```
 
 ### Adding content to pages
-- If you are adding text/regular content to a page, make sure to wrap the entire content with <h4></h4> tags.
-- <h1>, <h2>, <h3>, <h5>, and <h6> should not be used when adding text/regular content to a page, as they are customized to be used for different parts of the site only (e.g. search result headers, sub-headers). ***Future edits of the layout will fix this issue so that different header styles can be used in regular text***
+- If you are adding text/regular content to a page, make sure to wrap the entire content with `<h4></h4>` tags.
+- `<h1>`, `<h2>`, `<h3>`, `<h5>`, and `<h6>` should not be used when adding text/regular content to a page, as they are customized to be used for different parts of the site only (e.g. search result headers, sub-headers). ***Future edits of the layout will fix this issue so that different header styles can be used in regular text***
