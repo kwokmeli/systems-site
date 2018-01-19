@@ -2,9 +2,9 @@
   <?php get_header(); ?>
 
   <?php if ( is_front_page() ) { ?>
-    <h1>Systems Support</h1>
+    <div class="sub-header-text">Systems Support</div>
   <?php } else { ?>
-    <h1><?php echo get_the_title(); ?></h1>
+    <div class="sub-header-text"><?php echo get_the_title(); ?></div>
   <?php } ?>
 
   <div class="layout">
