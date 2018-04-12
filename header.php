@@ -13,10 +13,8 @@
     <!-- Create the 4-color bar above the header -->
     <div class="header-1"></div><div class="header-2"></div><div class="header-3"></div><div class="header-4"></div>
 <div class="blog-header">
-
- <title> <?php echo get_bloginfo('name'); ?> </title>
-      <div class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo('name');?></a></div>
-
+      <title> <?php echo get_bloginfo('name'); ?> </title>
+      <div class="header-logo"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" height="82px" width="auto"></div>
       <div class="search-box"><?php get_search_form(); ?></div>
     <?php wp_head(); ?>
 </div>
