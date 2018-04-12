@@ -7,6 +7,20 @@
     <div class="sub-header-text"><?php echo get_the_title(); ?></div>
   <?php } ?> -->
 
+<div id="header">
+  <ul>
+    <li><a href="">Th</a></li>
+    <li id="selected"><a href="">That</a></li>
+    <!-- <li><a href="">The Other fwefewfwef</a></li> -->
+    <li><a href="">Banana fsdf</a></li>
+  </ul>
+</div>
+
+<div id="content">
+  Content there
+</div>
+
+  <br>
   You are here: <?php echo get_the_title(); ?>
 
   <div class="layout">
