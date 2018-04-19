@@ -14,7 +14,7 @@
     <div class="header-1"></div><div class="header-2"></div><div class="header-3"></div><div class="header-4"></div>
 <div class="blog-header">
       <title> <?php echo get_bloginfo('name'); ?> </title>
-      <div class="header-logo"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" height="82px" width="auto"></div>
+      <div class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" height="82px" width="auto"></a></div>
       <div class="search-box"><?php get_search_form(); ?></div>
     <?php wp_head(); ?>
 </div>

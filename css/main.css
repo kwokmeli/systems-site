@@ -57,7 +57,7 @@ ul {
   background: white;
   padding-top: 2px;
   padding-bottom: 2px;
-  padding: 2px 4px 2px 4px;
+  padding: 2px 9px 2px 9px;
   color: #446981;
   /* width: 100px; */
   text-align: center;
@@ -88,6 +88,16 @@ ul {
 .header-logo {
   margin-left: 10px;
   margin-top: 5px;
+}
+
+.header-logo a {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+}
+
+.header-logo a:visited {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
 }
 
 /* Bold, gold header. Only used for sub-headers within the header. */
