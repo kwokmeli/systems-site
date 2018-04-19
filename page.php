@@ -4,11 +4,11 @@
   <div id="header">
     <ul>
 
-      <!-- Manually add the home page tab --> 
+      <!-- Manually add the home page tab -->
       <?php if (is_front_page()) { ?>
-        <li id="selected"><a href="">Home</a></li>
+        <li id="selected"><a href="<?php echo home_url(); ?>">Home</a></li>
       <?php } else { ?>
-        <li><a href="">Home</a></li>
+        <li><a href="<?php echo home_url(); ?>">Home</a></li>
       <?php } ?>
 
       <!-- Collect names of parent pages  -->
@@ -31,12 +31,11 @@
   </div>
 
   <div id="content">
-    Content there
   </div>
 
-  <br>
-  You are here: <?php echo get_the_title(); ?>
-  <br>
+  <div class="you-are-here">
+  You are here: <a href="<?php echo get_page_link()?>"><?php echo get_the_title(); ?></a>
+  </div>
 
   <div class="layout">
   <?php echo get_post_field('post_content', $post->ID); ?>

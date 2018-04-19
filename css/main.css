@@ -78,11 +78,25 @@ ul {
   font-size: 9pt;
   color: #446981;
   border-color: #8dacba !important;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   clear: both;
   padding: 0 10px;
   background-color: #dee7ec;
+  padding-top: 15px;
+}
+
+.you-are-here {
+  padding: 3px 0 3px 10px;
+  font-size: 9pt;
+  color: black;
+  border-bottom: 1px solid #8dacba;
+}
+
+.you-are-here a {
+  text-decoration: none;
+  border-bottom: 0;
+  color: #446981;
 }
 
 .header-logo {
