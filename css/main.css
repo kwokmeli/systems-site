@@ -15,7 +15,8 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: 'Karla', sans-serif;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: white;
   font-size: 14pt;
 }
 
@@ -373,9 +374,9 @@ h4 a:visited:hover {
 /* Styles the header */
 .blog-header {
   background-color: white;
-  box-shadow: 1px 1px 1px #e9e9e9;
+  /* box-shadow: 1px 1px 1px #e9e9e9; */
   padding: 13px 50px 13px 13px !important;
-  height: 125px;
+  height: 114px;
 }
 
 

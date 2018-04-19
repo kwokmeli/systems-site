@@ -3,7 +3,6 @@
 
   <div id="header">
     <ul>
-
       <!-- Manually add the home page tab -->
       <?php if (is_front_page()) { ?>
         <li id="selected"><a href="<?php echo home_url(); ?>">Home</a></li>
@@ -34,7 +33,16 @@
   </div>
 
   <div class="you-are-here">
-  You are here: <a href="<?php echo get_page_link()?>"><?php echo get_the_title(); ?></a>
+  You are here:
+
+  <!-- Get post ancestors to show in navigation bar -->
+  <?php
+  $parents = get_post_ancestors($post);
+  foreach ($parents as $parent) {
+    ?> <a href="<?php echo get_page_link($parent) ?>"><?php echo get_the_title($parent) ?></a> → <?php
+  }
+  echo get_the_title();
+  ?>
   </div>
 
   <div class="layout">
