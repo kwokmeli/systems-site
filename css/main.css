@@ -87,6 +87,21 @@ ul {
   padding-top: 15px;
 }
 
+/* Styles the title on every page of content */
+.page-title {
+  padding-top: 23px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16pt;
+  color: black;
+  border-bottom: 1px solid #8dacba;
+}
+
+/* Styles the content on every page of content */
+.page {
+
+}
+
 .you-are-here {
   padding: 3px 0 3px 10px;
   font-size: 9pt;
@@ -378,7 +393,6 @@ h4 a:visited:hover {
   padding: 13px 50px 13px 13px !important;
   height: 114px;
 }
-
 
 /* Header 1 through 4 styles the thin, 4-color border along the header */
 .header-1 {
