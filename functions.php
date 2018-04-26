@@ -11,3 +11,14 @@ function hslSystems_scripts() {
 // add_action('wp_head', 'my_favicon');
 
 add_action('wp_enqueue_scripts', 'hslSystems_scripts');
+
+// REMOVE THIS FUNCTION IF NOT DEBUGGING
+if (!function_exists('write_log')) {
+	function write_log($log) {
+		if (is_array($log) || is_object($log)) {
+			error_log(print_r($log, true));
+		} else {
+			error_log($log);
+		}
+	}
+}

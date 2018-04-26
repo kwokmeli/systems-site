@@ -13,16 +13,32 @@
       <!-- Collect names of parent pages  -->
       <?php
       $args = array (
-        // Only pages whose parent is the home page should be displayed in the header
+        // Only pages whose parent is the home page should be displayed in the header tabs
         'parent' => get_option('page_on_front')
       );
-      $pages = get_pages($args);
+      $pages = get_pages($args); // Array of pages whose parent is the home page
+      // Check what page you are on, so that the corresponding tab is "selected"
       foreach ($pages as $page) {
+        $selected = False;
         if (strcmp($page->post_title, get_the_title()) == 0) { ?>
+          <?php $selected = True; ?>
           <li id="selected">
-        <?php } else { ?>
-          <li>
-        <?php } ?>
+        <?php } else { // Check to see if parent or grandparent of page is one of the main header tabs
+          $parents = get_post_ancestors(get_the_ID());
+          $size = sizeof($parents);
+          write_log("sizeof parents: {$size}");
+          foreach ($parents as $parent) {
+            $tempParent = get_the_title($parent);
+            write_log("Comparing {$page->post_title} and {$tempParent}");
+            if (strcmp($page->post_title, get_the_title($parent)) == 0) {
+              $selected = True;
+              ?> <li id="selected"> <?php
+            }
+          }
+          if (!$selected) {
+            ?> <li> <?php
+          }
+        } ?>
           <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a></li> <?php
       }
       ?>
