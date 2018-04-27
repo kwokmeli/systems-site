@@ -10,8 +10,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Create the 4-color bar above the header -->
-    <div class="header-1"></div><div class="header-2"></div><div class="header-3"></div><div class="header-4"></div>
 <div class="blog-header">
       <title> <?php echo get_bloginfo('name'); ?> </title>
       <div class="header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" height="82px" width="auto"></a></div>

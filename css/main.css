@@ -70,7 +70,8 @@ ul {
 
 #header #selected a {
   position: relative;
-  top: 1px;
+  /* top: 1px; */
+  z-index: 5;
   background: #dee7ec;
   color: #446981;
 }
@@ -403,37 +404,6 @@ h4 a:visited:hover {
   height: 114px;
 }
 
-/* Header 1 through 4 styles the thin, 4-color border along the header */
-.header-1 {
-  height: 5px;
-  background-color: #5e7d93;
-  width: 25%;
-}
-
-.header-2 {
-  height: 5px;
-  background-color: #7e97a8;
-  width: 25%;
-  margin-left: 25%;
-  margin-top: -5px;
-}
-
-.header-3 {
-  height: 5px;
-  background-color: #9eb1be;
-  width: 25%;
-  margin-left: 50%;
-  margin-top: -5px;
-}
-
-.header-4 {
-  height: 5px;
-  background-color: #becbd3;
-  width: 25%;
-  margin-left: 75%;
-  margin-top: -5px;
-}
-
 /* Styles the footer */
 .blog-footer {
   /* box-shadow: 1px 1px 1px #e9e9e9; */
@@ -495,34 +465,48 @@ h4 a:visited:hover {
   margin-right: -22px;
   float: right;
   margin-top: -53px;
-  font-size: 8pt;
+  font-size: 12pt;
   font-family: 'Karla', sans-serif;
-  /* border-radius: 10px; */
-  border: 1px solid #8dacba;
-  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+  height: 35px;
   padding: 4px;
 }
 
 /* Styles the search submit button for the search bar */
 #searchsubmit {
-  height: 20px;
-  width: 20px;
+  height: 35px;
+  width: 45px;
   padding: 3px;
   margin-top: -2px;
 }
 
 /* Styles the text-input of the search bar */
 #s {
-  margin-top: -2px;
+  margin-top: 2px;
+  margin-left: 2px;
   font-family: 'Karla', sans-serif;
   height: 20px;
   border: none;
+  font-size: 11pt;
 }
 
-/* Wrapper for #searchsubmit */
-.search-button {
-  margin-top: 0px;
-  float: right;
+input[type=submit] {
+  position: relative;
+  background: #e5e5e5;
+  border: 1px solid #b2b2b2;
+  color: #5c5c5c;
+  height: 35px;
+  border-radius: 3px;
+  font-family: 'Karla', sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  margin-top: -5px;
+  right: -5px;
+}
+
+input[type=submit]:hover {
+  background: #cccccc;
 }
 
 .layout {
