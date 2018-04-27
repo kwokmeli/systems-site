@@ -2,6 +2,7 @@
   <?php get_header(); ?>
 
   <div id="header">
+    <div class="header-background"></div>
     <ul>
       <!-- Manually add the home page tab -->
       <?php if (is_front_page()) { ?>

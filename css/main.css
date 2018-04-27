@@ -36,44 +36,59 @@ ul {
   list-style-type: square;
 }
 
+.header-background {
+  position: relative;
+  background: #117cb1;
+  height: 46px;
+  width: 100%;
+  z-index: -10;
+  box-shadow: 0px 1px 6px #a5a5a5;
+}
+
 /* Styles the spacing between the tabs and the content area */
 #header ul {
   list-style: none;
   padding: 0 0 0 20px;
-  margin: 0;
+  /* margin: 0; */
+  margin-top: -46px;
 }
 
 /* Styles the tabs */
 #header li {
   /* width: 200px; */
   float: left;
-  border-bottom-width: 0;
-  margin: 0 10px 0 0;
+  /* border-bottom-width: 0; */
+  margin: 0 0 0 0;
 }
 
 #header a {
+  /* Adjusts height of main tabs */
+  height: 46px;
   border-bottom: 0;
   display: block;
   background: #117cb1;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding: 2px 9px 2px 9px;
+  padding: 15px 14px 2px 14px;
   color: white;
   font-size: 10pt;
   /* width: 100px; */
   text-align: center;
+  z-index: 5;
+}
+
+#header a:hover {
+  background: #7199be;
 }
 
 #header #selected {
-  border-color: #8dacba;
+  border-color: #7199be;
 }
 
 #header #selected a {
   position: relative;
   /* top: 1px; */
   z-index: 5;
-  background: #dee7ec;
-  color: #446981;
+  background: #7199be;
+  color: white;
 }
 
 /* #content {
@@ -115,7 +130,8 @@ ul {
 }
 
 .you-are-here {
-  margin-top: 40px;
+  z-index: -20;
+  margin-top: 27px;
   position: absolute;
   width: 100%;
   padding: 9px 0 9px 30px;
@@ -125,6 +141,7 @@ ul {
 }
 
 .you-are-here a {
+  z-index: -20;
   font-size: 11pt;
   text-decoration: none;
   border-bottom: 0;
