@@ -42,17 +42,15 @@
   </div>
 
   <!-- Creates blue bar below header tabs. Text can be placed here. -->
-  <div id="content">
-  </div>
+  <!-- <div id="content">
+  </div> -->
 
   <div class="you-are-here">
-  You are here:
-
   <!-- Get post ancestors to show in navigation bar -->
   <?php
   $parents = array_reverse(get_post_ancestors($post));
   foreach ($parents as $parent) {
-    ?> <a href="<?php echo get_page_link($parent) ?>"><?php echo get_the_title($parent) ?></a> → <?php
+    ?> <a href="<?php echo get_page_link($parent) ?>"><?php echo get_the_title($parent) ?></a> <i class="arrow right"></i> <?php
   }
   echo get_the_title();
   ?>
