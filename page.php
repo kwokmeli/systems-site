@@ -25,11 +25,7 @@
           <li id="selected">
         <?php } else { // Check to see if parent or grandparent of page is one of the main header tabs
           $parents = get_post_ancestors(get_the_ID());
-          $size = sizeof($parents);
-          write_log("sizeof parents: {$size}");
           foreach ($parents as $parent) {
-            $tempParent = get_the_title($parent);
-            write_log("Comparing {$page->post_title} and {$tempParent}");
             if (strcmp($page->post_title, get_the_title($parent)) == 0) {
               $selected = True;
               ?> <li id="selected"> <?php

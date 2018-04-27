@@ -99,7 +99,17 @@ ul {
 
 /* Styles the content on every page of content */
 .page {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 10pt;
+}
 
+.page a {
+  font-size: 10pt !important;
+}
+
+.page a:visited {
+  color: #446981;
 }
 
 .you-are-here {
@@ -139,7 +149,6 @@ ul {
   font-weight: lighter;
 }
 
-/* Bold, black header. Used for search results. */
 .search-results-title-text {
   font-size: 14pt;
   margin-left: 35px;
