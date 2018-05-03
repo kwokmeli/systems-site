@@ -107,6 +107,11 @@ ul {
   padding: 8px 12px 8px 12px;
 }
 
+.menu:hover {
+  background: #48739a;
+  border-color: #385977;
+}
+
 /* Styles the title on every page of content */
 .page-title {
   margin-top: 90px;
