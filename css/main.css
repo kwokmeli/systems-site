@@ -39,43 +39,49 @@ ul {
 .header-background {
   position: relative;
   background: #117cb1;
-  height: 46px;
+  height: 50px;
   width: 100%;
   z-index: -10;
-  /* box-shadow: 0px 1px 6px #a5a5a5; */
+}
+
+.dropdown-menu {
+  display: none;
+  height: 50px;
+  background: #117cb1;
 }
 
 /* Styles the spacing between the tabs and the content area */
 #header ul {
   list-style: none;
   padding: 0 0 0 20px;
-  /* margin: 0; */
   margin-top: -46px;
 }
 
 /* Styles the tabs */
 #header li {
-  /* width: 200px; */
   float: left;
-  /* border-bottom-width: 0; */
   margin: 0 0 0 0;
 }
 
 #header a {
   /* Adjusts height of main tabs */
-  height: 46px;
+  position: relative;
+  top: -4px;
+  height: 50px;
   border-bottom: 0;
   display: block;
   background: #117cb1;
-  padding: 15px 14px 2px 14px;
+  padding: 17px 14px 2px 14px;
   color: white;
   font-size: 10pt;
-  /* width: 100px; */
   text-align: center;
   z-index: 5;
 }
 
 #header a:hover {
+  position: relative;
+  top: -4px;
+  z-index: 5;
   background: #7199be;
 }
 
@@ -86,8 +92,19 @@ ul {
 #header #selected a {
   position: relative;
   z-index: 5;
+  top: -4px;
   background: #7199be;
   color: white;
+}
+
+.menu {
+  color: white;
+  float: right;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-size: 10pt;
+  margin: 8px 10px 8px 4px;
+  padding: 8px 12px 8px 12px;
 }
 
 /* Styles the title on every page of content */
@@ -150,6 +167,7 @@ i {
   height: 5px;
 }
 
+/* Styles the right "arrow" that is used in the navigation bar under the header tabs */
 .right {
   transform: rotate(-45deg);
   -webkit-transform:rotate(-45deg);
@@ -348,7 +366,7 @@ h4 a:visited:hover {
   margin: 15px 15px 15px 15px;
 }
 
-.container {
+/* .container {
   display: inline-block;
   margin: 15px 15px 15px 15px;
   box-shadow: 1px 1px 1px #E4E4E4;
@@ -403,7 +421,7 @@ h4 a:visited:hover {
 
 .container:hover .overlay {
   opacity: 1;
-}
+} */
 
 .text {
   color: white;
@@ -535,74 +553,44 @@ input[type=submit]:hover {
   top: 48px;
 }
 
-@media (max-width: 851px) {
-  .sub-menu-button-text {
-    font-size: 12pt;
+/* Shrink header tabs to a dropdown menu */
+@media (max-width: 1461px) {
+  #header {
+    display: none;
   }
+
+  .you-are-here {
+    margin-top: 0px;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
 }
 
-/* Used to keep maximum number of columns as 3; shrinks to 2 columns when window is less than 786px wide */
-@media (max-width: 786px) {
- .home-wrapper {
-   width: 500px;
- }
-}
-
-@media (max-width: 783px) {
-  .blog-title a {
-    font-size: 16pt;
+@media (max-width: 639px) {
+  /* Increase the white space below the main logo to make room for the search bar */
+  .blog-header {
+    height: 200px;
   }
 
-  .sub-header-text {
-    font-size: 14pt;
-  }
-}
 
-@media (max-width: 671px) {
-  .blog-title a {
-    font-size: 14pt;
-  }
-
-  .sub-header-text {
-    font-size: 12pt;
-    margin-top: -69px;
-  }
-
-  .sub-menu-button-text {
-    font-size: 10pt;
-  }
-}
-
-@media (max-width: 626px) {
-  .blog-title a {
-    font-size: 12pt;
-  }
-
-  .sub-header-text {
-    font-size: 10pt;
-    margin-top: -73px;
-  }
-}
-
-/* Used to keep maximum number of columns as 3; shrinks to 1 column when window is less that 587px wide */
-@media (max-width: 587px) {
-  .home-wrapper {
+  /* Re-position search bar */
+  .search-box {
+    float: none;
+    margin: 0 auto;
     width: 300px;
-  }
-}
-
-@media (max-width: 551px) {
-  .blog-title {
-    width: 200px;
+    margin-top: 30px;
   }
 
-  .sub-header-text {
-    margin-top: -50px;
+  #s {
+    width: 220px;
   }
-}
 
-@media (max-width: 481px) {
-  .blog-title {
-    width: 150px;
+  /* Re-position search button */
+  input[type=submit] {
+    right: -9px;
   }
+
 }

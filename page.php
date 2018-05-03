@@ -1,6 +1,12 @@
 <div class="body">
   <?php get_header(); ?>
 
+  <div class="dropdown-menu">
+    <div class="menu">
+      Menu
+    </div>
+  </div>
+
   <div id="header">
     <div class="header-background"></div>
     <ul>
