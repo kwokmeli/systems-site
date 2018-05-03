@@ -42,7 +42,7 @@ ul {
   height: 46px;
   width: 100%;
   z-index: -10;
-  box-shadow: 0px 1px 6px #a5a5a5;
+  /* box-shadow: 0px 1px 6px #a5a5a5; */
 }
 
 /* Styles the spacing between the tabs and the content area */
@@ -85,23 +85,10 @@ ul {
 
 #header #selected a {
   position: relative;
-  /* top: 1px; */
   z-index: 5;
   background: #7199be;
   color: white;
 }
-
-/* #content {
-  font-size: 9pt;
-  color: #446981;
-  border-color: #8dacba !important;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  clear: both;
-  padding: 0 10px;
-  background-color: #dee7ec;
-  padding-top: 15px;
-} */
 
 /* Styles the title on every page of content */
 .page-title {
@@ -130,7 +117,6 @@ ul {
 }
 
 .you-are-here {
-  z-index: -20;
   margin-top: 27px;
   position: absolute;
   width: 100%;
@@ -138,14 +124,20 @@ ul {
   font-size: 11pt;
   color: black;
   background: #edecec;
+  -webkit-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
+  -moz-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
+  box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
 }
 
 .you-are-here a {
-  z-index: -20;
   font-size: 11pt;
   text-decoration: none;
   border-bottom: 0;
-  color: #446981;
+  color: #2889b8;
+}
+
+.you-are-here a:hover {
+  border-bottom: 1px solid;
 }
 
 i {

@@ -42,10 +42,6 @@
     </ul>
   </div>
 
-  <!-- Creates blue bar below header tabs. Text can be placed here. -->
-  <!-- <div id="content">
-  </div> -->
-
   <div class="you-are-here">
   <!-- Get post ancestors to show in navigation bar -->
   <?php
