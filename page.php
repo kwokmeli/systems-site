@@ -1,9 +1,62 @@
 <div class="body">
   <?php get_header(); ?>
 
-  <div class="dropdown-menu">
+  <!-- <div class="dropdown-menu">
     <div class="menu">
       Menu
+    </div>
+  </div> -->
+
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <script>
+  $(document).ready(function() {
+  var last;
+
+  // Closes drawers. Removes header
+  // selections.
+  function clear() {
+    $(".m-title").removeClass("active");
+    $(".drawer").removeClass("open");
+    last = null;
+  }
+
+  /* • Opens/Closes drawer by its header.
+     • Enables consistent opening/closing of
+       the same drawer.*/
+  function load(element) {
+    var temp = element.index();
+
+    if (temp == last)
+      clear();
+    else {
+      clear();
+      element.addClass("active");
+      element.next().addClass("open");
+      last = element.index();
+    }
+  }
+
+  // Listens for header clicks.
+  $(".m-title").click(function() {
+    load($(this));
+  });
+
+  // Does the same thing as clear(), but with   // a button.
+  $("#button").click(function() {
+    $(".m-title").removeClass("active");
+    $(".drawer").removeClass("open");
+  });
+
+});
+  </script>
+
+  <div id="menu-container">
+    <div id="m-wrap">
+      <div id="m-map" class="m-title"> <span>Menu</span></div>
+      <div id="m-draw1" class="drawer"></div>
     </div>
   </div>
 
