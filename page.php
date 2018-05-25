@@ -1,12 +1,6 @@
 <div class="body">
   <?php get_header(); ?>
 
-  <!-- <div class="dropdown-menu">
-    <div class="menu">
-      Menu
-    </div>
-  </div> -->
-
   <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -44,19 +38,49 @@
     load($(this));
   });
 
-  // Does the same thing as clear(), but with   // a button.
-  $("#button").click(function() {
-    $(".m-title").removeClass("active");
-    $(".drawer").removeClass("open");
-  });
-
 });
   </script>
 
   <div id="menu-container">
     <div id="m-wrap">
       <div id="m-map" class="m-title"> <span>Menu</span></div>
-      <div id="m-draw1" class="drawer"></div>
+      <div id="m-draw1" class="drawer">
+        <!-- Manually add the home page tab -->
+        <?php if (is_front_page()) { ?>
+          <a href="<?php echo home_url(); ?>">Home</a>
+        <?php } else { ?>
+          <a href="<?php echo home_url(); ?>">Home</a>
+        <?php } ?>
+
+        <!-- Collect names of parent pages  -->
+        <?php
+        $args = array (
+          // Only pages whose parent is the home page should be displayed in the header tabs
+          'parent' => get_option('page_on_front')
+        );
+        $pages = get_pages($args); // Array of pages whose parent is the home page
+        // Check what page you are on, so that the corresponding tab is "selected"
+        foreach ($pages as $page) {
+          $selected = False;
+          if (strcmp($page->post_title, get_the_title()) == 0) { ?>
+            <?php $selected = True; ?>
+            SELECTED - [
+          <?php } else { // Check to see if parent or grandparent of page is one of the main header tabs
+            $parents = get_post_ancestors(get_the_ID());
+            foreach ($parents as $parent) {
+              if (strcmp($page->post_title, get_the_title($parent)) == 0) {
+                $selected = True;
+                ?> SELECTED - [<?php
+              }
+            }
+            if (!$selected) {
+              ?> ] <?php
+            }
+          } ?>
+            <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a>]<?php
+        }
+        ?>
+      </div>
     </div>
   </div>
 

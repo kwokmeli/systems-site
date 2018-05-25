@@ -45,12 +45,6 @@ ul {
   z-index: -10;
 }
 
-.dropdown-menu {
-  display: none;
-  height: 50px;
-  background: #117cb1;
-}
-
 /* Styles the spacing between the tabs and the content area */
 #header ul {
   list-style: none;
@@ -98,6 +92,7 @@ ul {
   color: white;
 }
 
+/* Style the dropdown menu */
 #menu-container {
   visibility: hidden;
   display: flex;
@@ -105,14 +100,15 @@ ul {
   min-width: 350px;
   width: 100%;
   background: #117cb1;
+  /* height: 46px; */
 }
 
 #m-wrap{
   display: flex;
   flex-direction: column;
-  min-width: 300px;
-  max-width: 500px;
-  width: 65%;
+  /* min-width: 300px;
+  max-width: 500px; */
+  /* width: 65%; */
   height: auto;
   color: white;
 }
@@ -120,16 +116,19 @@ ul {
 .m-title {
   display: flex;
   justify-content: center;
-  align-self: right;
+  /* align-self: center; */
   /* width: 100%; */
-  width: 75px;
+  padding: 7px 9px 7px 9px;
+  margin: 7px 20px 7px 20px;
+  width: 60px;
   border: 1px solid white;
   border-radius: 3px;
-  height: 46px;
 }
 
 .m-title:hover {
   cursor: pointer;
+  background-color: #48739a;
+  border-color: #385977;
 }
 
 .m-title:active {
@@ -138,22 +137,31 @@ ul {
 .m-title span {
   align-self: center;
   font-size: 11pt;
-  padding: 5px;
-
 }
 
 .drawer {
   height: 0px;
   width: 100%;
-  border: 1px solid blue;
+  border-top: 1px solid red;
   align-self: center;
-  transition: 0.5s;
+  visibility: hidden;
+  /* transition: 0.5s; */
+}
+
+.drawer a {
+  font-family: sans-serif;
+  color: white;
+  font-size: 12pt;
+  font-weight: lighter;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .drawer.open {
+  visibility: visible;
   height: 100px;
   position: relative;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 .menu {
