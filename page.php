@@ -17,16 +17,15 @@
     last = null;
   }
 
-  /* • Opens/Closes drawer by its header.
-     • Enables consistent opening/closing of
-       the same drawer.*/
   function load(element) {
     var temp = element.index();
 
     if (temp == last)
+      // Close menu
       clear();
     else {
-      clear();
+      // Open menu
+      // clear();
       element.addClass("active");
       element.next().addClass("open");
       last = element.index();
@@ -43,43 +42,44 @@
 
   <div id="menu-container">
     <div id="m-wrap">
-      <div id="m-map" class="m-title"> <span>Menu</span></div>
-      <div id="m-draw1" class="drawer">
-        <!-- Manually add the home page tab -->
-        <?php if (is_front_page()) { ?>
-          <a href="<?php echo home_url(); ?>">Home</a>
-        <?php } else { ?>
-          <a href="<?php echo home_url(); ?>">Home</a>
-        <?php } ?>
+      <div class="m-title"> <span>Menu</span></div>
+      <div class="drawer">
+        <div class="vertical-header">
+          <!-- Manually add the home page tab -->
+          <?php if (is_front_page()) { ?>
+            <a href="<?php echo home_url(); ?>">Home</a>
+          <?php } else { ?>
+            <a href="<?php echo home_url(); ?>">Home</a>
+          <?php } ?>
 
-        <!-- Collect names of parent pages  -->
-        <?php
-        $args = array (
-          // Only pages whose parent is the home page should be displayed in the header tabs
-          'parent' => get_option('page_on_front')
-        );
-        $pages = get_pages($args); // Array of pages whose parent is the home page
-        // Check what page you are on, so that the corresponding tab is "selected"
-        foreach ($pages as $page) {
-          $selected = False;
-          if (strcmp($page->post_title, get_the_title()) == 0) { ?>
-            <?php $selected = True; ?>
-            SELECTED - [
-          <?php } else { // Check to see if parent or grandparent of page is one of the main header tabs
-            $parents = get_post_ancestors(get_the_ID());
-            foreach ($parents as $parent) {
-              if (strcmp($page->post_title, get_the_title($parent)) == 0) {
-                $selected = True;
-                ?> SELECTED - [<?php
+          <!-- Collect names of parent pages  -->
+          <?php
+          $args = array (
+            // Only pages whose parent is the home page should be displayed in the header tabs
+            'parent' => get_option('page_on_front')
+          );
+          $pages = get_pages($args); // Array of pages whose parent is the home page
+          // Check what page you are on, so that the corresponding tab is "selected"
+          foreach ($pages as $page) {
+            $selected = False;
+            if (strcmp($page->post_title, get_the_title()) == 0) { ?>
+              <?php $selected = True; ?>
+              <a class="active" href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a>
+            <?php } else { // Check to see if parent or grandparent of page is one of the main header tabs
+              $parents = get_post_ancestors(get_the_ID());
+              foreach ($parents as $parent) {
+                if (strcmp($page->post_title, get_the_title($parent)) == 0) {
+                  $selected = True;
+                  ?> <a class="active" href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a> <?php
+                }
+              }
+              if (!$selected) {
+                ?> <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a> <?php
               }
             }
-            if (!$selected) {
-              ?> ] <?php
-            }
-          } ?>
-            <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a>]<?php
-        }
-        ?>
+          }
+          ?>
+        </div>
       </div>
     </div>
   </div>

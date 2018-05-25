@@ -45,6 +45,27 @@ ul {
   z-index: -10;
 }
 
+.vertical-header {
+  width: 100%;
+}
+
+.vertical-header a {
+  background: #117cb1;
+  display: block;
+  padding: 22px;
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: -22px;
+}
+
+.vertical-header a:hover {
+  background: #7199be;
+}
+
+.vertical-header a.active {
+  background: #7199be;
+}
+
 /* Styles the spacing between the tabs and the content area */
 #header ul {
   list-style: none;
@@ -97,7 +118,7 @@ ul {
   visibility: hidden;
   display: flex;
   justify-content: center;
-  min-width: 350px;
+  /* min-width: 350px; */
   width: 100%;
   background: #117cb1;
   /* height: 46px; */
@@ -113,10 +134,11 @@ ul {
   color: white;
 }
 
+/* Styles menu button */
 .m-title {
   display: flex;
   justify-content: center;
-  /* align-self: center; */
+  align-self: center;
   /* width: 100%; */
   padding: 7px 9px 7px 9px;
   margin: 7px 20px 7px 20px;
@@ -141,8 +163,9 @@ ul {
 
 .drawer {
   height: 0px;
-  width: 100%;
-  border-top: 1px solid red;
+  /* width: 90%; */
+  border-top: 1px solid #2a89b9;
+  padding: 0 30px 0 30px;
   align-self: center;
   visibility: hidden;
   /* transition: 0.5s; */
@@ -159,7 +182,7 @@ ul {
 
 .drawer.open {
   visibility: visible;
-  height: 100px;
+  height: auto;
   position: relative;
   /* transition: 0.5s; */
 }
@@ -364,7 +387,7 @@ h4 a:visited:hover {
 }
 
 /* Wraps around all homepage buttons; makes sure that there are no more than 3 buttons per row */
-.home-wrapper {
+/* .home-wrapper {
   width: 700px;
 }
 
@@ -373,16 +396,16 @@ h4 a:visited:hover {
   border-bottom: none;
   font-size: 14pt;
   color: #5e7d93;
-}
+} */
 
-.home-wrapper a:visited {
+/* .home-wrapper a:visited {
   text-decoration: none;
   border-bottom: none;
   color: #5e7d93;
-}
+} */
 
 /* Div to surround sub-menu button text */
-.sub-menu-button-text {
+/* .sub-menu-button-text {
   display: table-cell;
   vertical-align: middle;
   font-size: 14pt;
@@ -390,17 +413,17 @@ h4 a:visited:hover {
 }
 
 /* Used to make entire div a link */
-.link-spanner {
+/* .link-spanner {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1;
-}
+} */
 
 /* Styles the sub-menu buttons */
-.sub-menu-button {
+/* .sub-menu-button {
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -414,20 +437,20 @@ h4 a:visited:hover {
   text-align: center;
   border-right: 4px solid #9eb1be;
   position: relative;
-}
+} */
 
-.sub-menu-button:hover > .sub-menu-button-text {
+/* .sub-menu-button:hover > .sub-menu-button-text { */
   /* border-right: 4px solid #ced8de; */
-  border-right: 4px solid #cca80c;
+  /* border-right: 4px solid #cca80c;
   color: #8ea4b3;
-}
-
+} */
+/*
 .sub-menu-button:hover {
   border-right: none;
-}
+} */
 
 /* Styles the home page buttons */
-.front-page-button {
+/* .front-page-button {
   position: relative;
   background-color: white;
   border: 1px solid #F2F2F2;
@@ -436,63 +459,6 @@ h4 a:visited:hover {
   display: inline-block;
   box-shadow: 1px 1px 1px #E4E4E4;
   margin: 15px 15px 15px 15px;
-}
-
-/* .container {
-  display: inline-block;
-  margin: 15px 15px 15px 15px;
-  box-shadow: 1px 1px 1px #E4E4E4;
-  border: 1px solid #F2F2F2;
-  background-color: white;
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.container a {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.container a:visited {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.container img {
-  position: relative;
-  margin-top: 33.33%;
-  left: 0 auto;
-  right: 0 auto;
-  max-height: 33.33%;
-  max-width: 33.33%;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #5e7d93;
-}
-
-.overlay a {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.overlay a:visited {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.container:hover .overlay {
-  opacity: 1;
 } */
 
 .text {
