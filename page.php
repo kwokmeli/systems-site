@@ -7,39 +7,39 @@
 
   <script>
   $(document).ready(function() {
-  var last;
+    var last;
 
-  // Closes drawers. Removes header
-  // selections.
-  function clear() {
-    $(".m-title").removeClass("active");
-    $(".drawer").removeClass("open");
-    last = null;
-  }
-
-  function load(element) {
-    var temp = element.index();
-
-    if (temp == last)
-      // Close menu
-      clear();
-    else {
-      // Open menu
-      // clear();
-      element.addClass("active");
-      element.next().addClass("open");
-      last = element.index();
+    // Closes drawers
+    function clear() {
+      $(".m-title").removeClass("active");
+      $(".drawer").removeClass("open");
+      last = null;
     }
-  }
 
-  // Listens for header clicks.
-  $(".m-title").click(function() {
-    load($(this));
+    function load(element) {
+      var temp = element.index();
+
+      // Closes menu
+      if (temp == last)
+        clear();
+
+      // Opens menu
+      else {
+        // clear();
+        element.addClass("active");
+        element.next().addClass("open");
+        last = element.index();
+      }
+    }
+
+    // Listens for header clicks
+    $(".m-title").click(function() {
+      load($(this));
+    });
   });
-
-});
   </script>
 
+  <!-- PHP for the dropdown menu when the screen width is too narrow -->
   <div id="menu-container">
     <div id="m-wrap">
       <div class="m-title"> <span>Menu</span></div>
@@ -84,6 +84,7 @@
     </div>
   </div>
 
+  <!-- PHP for the menu bar when the screen width is wide enough -->
   <div id="header">
     <div class="header-background"></div>
     <ul>
