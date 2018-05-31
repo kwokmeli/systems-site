@@ -42,7 +42,7 @@
   <!-- PHP for the dropdown menu when the screen width is too narrow -->
   <div id="menu-container">
     <div id="m-wrap">
-      <div class="m-title"> <span>Menu</span></div>
+      <div class="m-title"><span>Menu</span></div>
       <div class="drawer">
         <div class="vertical-header">
           <!-- Manually add the home page tab -->
