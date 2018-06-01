@@ -47,7 +47,7 @@
         <div class="vertical-header">
           <!-- Manually add the home page tab -->
           <?php if (is_front_page()) { ?>
-            <a href="<?php echo home_url(); ?>">Home</a>
+            <a class="active" href="<?php echo home_url(); ?>">Home</a>
           <?php } else { ?>
             <a href="<?php echo home_url(); ?>">Home</a>
           <?php } ?>

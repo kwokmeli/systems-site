@@ -281,13 +281,13 @@ i {
 }
 
 /* Bold, gold header. Only used for sub-headers within the header. */
-.sub-header-text {
+/* .sub-header-text {
   color: #cca80c;
   font-size: 18pt;
   margin-top: -62px;
   margin-left: 33px;
   font-weight: lighter;
-}
+} */
 
 .search-results-title-text {
   font-size: 14pt;
