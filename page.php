@@ -39,6 +39,10 @@
   });
   </script>
 
+  <!-- Creates the sidebar -->
+  <div class="sidebar">
+  </div>
+
   <!-- PHP for the dropdown menu when the screen width is too narrow -->
   <div id="menu-container">
     <div id="m-wrap">

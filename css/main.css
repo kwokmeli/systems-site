@@ -15,7 +15,7 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
-  background-color: white;
+  background-color: #fafafa;
   font-size: 14pt;
   font-weight: 300;
 }
@@ -33,6 +33,40 @@ ul {
   color: #696969;
   list-style-type: square;
 }
+
+table, td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+th {
+  color: #696969 !important;
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+  background-color: white;
+  font-size: 22pt;
+  font-weight: 400;
+}
+
+h1 {
+  color: #696969;
+  font-weight: 700;
+  font-size: 14pt !important;
+}
+
+/* .sidebar {
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  width: 120px;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+} */
 
 .header-background {
   top: -48px;
@@ -204,7 +238,7 @@ ul {
   margin-left: 55px;
   margin-right: 55px;
   font-size: 20pt;
-  color: black;
+  color: #696969;
   border-bottom: 1px solid #8dacba;
   font-weight: 600;
 }
@@ -236,8 +270,9 @@ ul {
   width: 100%;
   padding: 9px 25px 9px 30px;
   font-size: 11pt;
-  color: black;
-  background: #edecec;
+  color: #696969;
+  /* background: #edecec; */
+  background-color: #e6e4e4;
   -webkit-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
   -moz-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
   box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
@@ -402,12 +437,13 @@ i {
 
 /* Styles the text-input of the search bar */
 #s {
-  margin-top: 2px;
+  margin-top: 1px;
   margin-left: 2px;
   font-family: 'Open Sans', sans-serif;
   height: 20px;
   border: none;
   font-size: 11pt;
+  background-color: #fafafa;
 }
 
 input[type=submit] {
