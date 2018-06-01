@@ -14,17 +14,15 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
-  font-family: 'Karla', sans-serif;
-  /* background-color: #f9f9f9; */
+  font-family: 'Open Sans', sans-serif;
   background-color: white;
   font-size: 14pt;
+  font-weight: 300;
 }
 
 a:link {
-  color: #5e7d93;
+  color: #117cb1;
   text-decoration: none;
-  border-bottom: 1px solid #c4c4c4;
-  font-size: 9pt;
 }
 
 input#searchsubmit {
@@ -32,7 +30,7 @@ input#searchsubmit {
 }
 
 ul {
-  color: #5e7d93;
+  color: #696969;
   list-style-type: square;
 }
 
@@ -203,27 +201,34 @@ ul {
 /* Styles the title on every page of content */
 .page-title {
   margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 16pt;
+  margin-left: 55px;
+  margin-right: 55px;
+  font-size: 20pt;
   color: black;
   border-bottom: 1px solid #8dacba;
+  font-weight: 600;
 }
 
 /* Styles the content on every page of content */
 .page {
+  color: #696969;
   margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 10pt;
+  margin-left: 55px;
+  margin-right: 55px;
+  font-size: 12pt;
 }
 
 .page a {
-  font-size: 10pt !important;
+  color: #117cb1;
+  font-size: 12pt !important;
 }
 
 .page a:visited {
-  color: #446981;
+  color: #117cb1;
+}
+
+.page a:hover {
+  color: #064664;
 }
 
 .you-are-here {
@@ -249,6 +254,7 @@ ul {
   border-bottom: 1px solid;
 }
 
+/* Creates the right "arrow" that is used in the navigation bar under the header tabs */
 i {
   border: solid #bdbcbc;
   border-width: 0 1px 1px 0;
@@ -310,51 +316,6 @@ i {
   border: none;
 }
 
-/* Header Style 1 */
-h1 {
-  margin-left: 35px;
-  margin-right: 35px;
-
-}
-
-/* Header Style 2 */
-h2 {
-  margin-left: 35px;
-  margin-right: 35px;
-}
-
-/* Header Style 3 */
-h3 {
-  margin-left: 35px;
-  margin-right: 35px;
-}
-
-/* Body text */
-h4 {
-  font-size: 12pt;
-  margin-left: 35px;
-  margin-right: 35px;
-  font-weight: lighter;
-}
-
-h4 a {
-  text-decoration: none !important;
-  border: none !important;
-  font-size: 12pt !important;
-}
-
-h4 a:hover {
-  color: #ced8de;;
-}
-
-h4 a:visited {
-  color: #5e7d93;
-}
-
-h4 a:visited:hover {
-  color: #ced8de;
-}
-
 /* Body text for search results */
 .search-results-text {
   font-size: 12pt;
@@ -363,26 +324,6 @@ h4 a:visited:hover {
   margin-top: -17px;
   margin-bottom: 20px;
   font-weight: lighter;
-}
-
-.text {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  font-size: 20pt;
-}
-
-.text a {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.text a:visited {
-  text-decoration: none !important;
-  border: none !important;
 }
 
 /* Styles the header */
@@ -446,21 +387,13 @@ h4 a:visited:hover {
   color: #5e7d93;
 }
 
-/* Styles lines used for breaks between paragraphs */
-.line {
-  border-bottom: 1px solid #5e7d93;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: -10px;
-}
-
 /* Styles search box */
 .search-box {
   margin-right: -22px;
   float: right;
   margin-top: -53px;
   font-size: 12pt;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border-radius: 3px;
   border: 1px solid #cccccc;
   height: 35px;
@@ -471,7 +404,7 @@ h4 a:visited:hover {
 #s {
   margin-top: 2px;
   margin-left: 2px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: 20px;
   border: none;
   font-size: 11pt;
@@ -484,7 +417,7 @@ input[type=submit] {
   color: #5c5c5c;
   height: 35px;
   border-radius: 3px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 10pt;
   font-weight: bold;
   margin-top: -5px;
