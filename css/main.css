@@ -134,8 +134,8 @@ ul {
 .m-title {
   float: right !important;
   display: flex;
-  /* justify-content: center;
-  align-self: center; */
+  justify-content: center;
+  align-self: center;
   padding: 7px 9px 7px 9px;
   margin: 7px 20px 7px 20px;
   width: 60px;
@@ -151,7 +151,7 @@ ul {
 
 .m-title span {
   float: right !important;
-  /* align-self: center; */
+  align-self: center;
   font-size: 11pt;
 }
 
@@ -554,6 +554,15 @@ input[type=submit]:hover {
   }
 
   .search-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-logo {
+    display: inline-block;
+  }
+
+  .header-wrapper {
     text-align: center;
     width: 100%;
   }
