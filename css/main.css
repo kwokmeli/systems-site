@@ -195,10 +195,14 @@ ul {
   border-color: #385977;
 }
 
+.content-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
 /* Styles the title on every page of content */
 .page-title {
-  margin-top: 90px;
-  /* padding-top: 23px; */
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   font-size: 16pt;
@@ -210,6 +214,7 @@ ul {
 .page {
   margin-top: 10px;
   margin-left: 20px;
+  margin-right: 20px;
   font-size: 10pt;
 }
 
@@ -222,10 +227,9 @@ ul {
 }
 
 .you-are-here {
-  margin-top: 27px;
-  position: absolute;
+  margin-top: 46px;
   width: 100%;
-  padding: 9px 0 9px 30px;
+  padding: 9px 25px 9px 30px;
   font-size: 11pt;
   color: black;
   background: #edecec;
@@ -536,7 +540,7 @@ input[type=submit]:hover {
   }
 
   .page-title {
-    margin-top: 44px;
+    margin-top: 24px;
   }
 }
 
