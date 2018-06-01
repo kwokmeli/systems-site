@@ -280,27 +280,18 @@ i {
   text-decoration: none !important;
 }
 
-/* Bold, gold header. Only used for sub-headers within the header. */
-/* .sub-header-text {
-  color: #cca80c;
-  font-size: 18pt;
-  margin-top: -62px;
-  margin-left: 33px;
-  font-weight: lighter;
-} */
-
 .search-results-title-text {
   font-size: 14pt;
   margin-left: 35px;
   margin-right: 35px;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 /* Large, normal-weight header. Used for search results. */
 .search-results-header {
-  color: #5e7d93;
+  color: #117cb1;
   font-size: 13pt;
   margin-left: 35px;
   margin-right: 35px;
@@ -371,15 +362,6 @@ h4 a:visited:hover {
   margin-right: 35px;
   margin-top: -17px;
   margin-bottom: 20px;
-  font-weight: lighter;
-}
-
-/* Text for when no search results found */
-.no-results-text {
-  font-size: 16pt;
-  margin-left: 35px !important;
-  margin-right: 35px;
-  margin-top: 50px;
   font-weight: lighter;
 }
 

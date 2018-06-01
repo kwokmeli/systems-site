@@ -56,8 +56,8 @@ $(document).ready(function() {
         );
         $pages = get_pages($args); // Array of pages whose parent is the home page
         // Check what page you are on, so that the corresponding tab is "selected"
-        foreach ($pages as $page) {
-              ?> <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a> <?php
+        foreach ($pages as $page) { ?>
+          <a href="<?php echo get_page_link($page->ID)?>"> <?php echo $page->post_title; ?> </a> <?php
         } ?>
       </div>
     </div>
@@ -89,19 +89,24 @@ $(document).ready(function() {
 Home
 </div>
 
+<?php $count = 1; ?>
+
 <!-- Show search results, if any -->
-<?php if ( have_posts() ) : ?>
+<?php if (have_posts()) : ?>
     <div class="search-results-title-text">Search results for query "<?php the_search_query(); ?>":</div>
 	<?php
-	while ( have_posts() ) : the_post(); ?>
-			<?php if ( has_post_thumbnail() ) { ?>
+	while (have_posts()) : the_post(); ?>
+			<?php if (has_post_thumbnail()) { ?>
 			<?php } ?>
-            <a href="<?php the_permalink(); ?>"><?php the_title('<div class="search-results-header">', '</div>') ?></a>
+            <a href="<?php the_permalink(); ?>">
+              <div class="search-results-header"> <?php echo $count; ?>. <?php echo get_the_title(); ?> </div>
+            </a>
 				<div class="search-results-text"><?php echo get_the_excerpt(); ?></div>
+        <?php $count = $count + 1; ?>
 	<?php endwhile;
 
 else : ?>
-  <div class="no-results-text">No search results were found for query "<?php the_search_query(); ?>".</div>
+  <div class="search-results-title-text">No search results were found for query "<?php the_search_query(); ?>".</div>
 <?php endif;
 
 get_footer();
