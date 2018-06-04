@@ -41,6 +41,8 @@
 
   <!-- Creates the sidebar -->
   <div class="sidebar">
+    <div class="sidebar-button">&#9776;</div>
+    <div class="arrow-down"></div>
   </div>
 
   <!-- PHP for the dropdown menu when the screen width is too narrow -->
