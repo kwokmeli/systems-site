@@ -36,13 +36,26 @@
     $(".m-title").click(function() {
       load($(this));
     });
+
+    // Animation for hovering over sidebar icons
+    $(".sidebar-icon").hover(function() {
+      $(this).css("background-color", "#117cb1");
+      $(this).css("transition", "0.5s");
+    }, function() {
+      $(this).css("background-color", "transparent");
+      $(this).css("transition", "0.5s");
+    });
   });
   </script>
 
   <!-- Creates the sidebar -->
   <div class="sidebar">
-    <div class="sidebar-button">&#9776;</div>
+    <div id="sidebar-toggle" class="sidebar-button">&#9776;</div>
     <div class="arrow-down"></div>
+    <div class="sidebar-icon-wrapper">
+      <div id="icon" class="sidebar-icon"><a href="">&#10022;</a></div>
+      <div id="icon" class="sidebar-icon"><a href="">&#10033;</a></div>
+    </div>
   </div>
 
   <!-- PHP for the dropdown menu when the screen width is too narrow -->

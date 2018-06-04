@@ -67,10 +67,16 @@ h1 {
   border-right: 4px solid transparent;
   border-top: 4px solid #09587e;
   margin: 0 auto;
+  z-index: 100;
 }
 
 .arrow-down:hover {
   border-top: 4px solid #117cb1;
+}
+
+.sidebar-icon-wrapper {
+  top: -4px;
+  position: relative;
 }
 
 .sidebar-button {
@@ -81,11 +87,16 @@ h1 {
   font-size: 20pt;
   text-align: center;
   line-height: 60px;
-  z-index: 20;
+  z-index: 10;
 }
 
 .sidebar-button:hover {
   background-color: #117cb1;
+  cursor: default;
+}
+
+.sidebar-button:hover + .arrow-down {
+  border-top: 4px solid #117cb1;
 }
 
 .sidebar {
@@ -94,10 +105,29 @@ h1 {
   position: fixed;
   background-color: black;
   width: 60px;
-  z-index: 20;
+  z-index: 10;
   left: 0;
   top: 0;
   overflow-x: hidden;
+}
+
+.sidebar-icon {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 60px;
+  color: white;
+  z-index: 200;
+}
+
+.sidebar-icon {
+  color: white;
+}
+
+.sidebar-icon a:visited {
+  color: white;
 }
 
 .header-background {
