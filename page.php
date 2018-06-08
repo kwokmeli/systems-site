@@ -39,11 +39,17 @@
 
     // Animation for hovering over sidebar icons
     $(".sidebar-icon").hover(function() {
+      // Hover on top
       $(this).css("background-color", "#117cb1");
       $(this).css("transition", "0.5s");
+      $(this).children("img").css("visibility", "hidden");
+      $(this).children("#label").css("visibility", "visible");
     }, function() {
+      // Hover away from
       $(this).css("background-color", "transparent");
       $(this).css("transition", "0.5s");
+      $(this).children("img").css("visibility", "visible");
+      $(this).children("#label").css("visibility", "hidden");
     });
   });
   </script>
@@ -53,8 +59,24 @@
     <div id="sidebar-toggle" class="sidebar-button">&#9776;</div>
     <div class="arrow-down"></div>
     <div class="sidebar-icon-wrapper">
-      <div id="icon" class="sidebar-icon"><a href="">&#10022;</a></div>
-      <div id="icon" class="sidebar-icon"><a href="">&#10033;</a></div>
+      <div class="sidebar-icon">
+        <img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/>
+        <div id="label" class="sidebar-label">USER</div>
+      </div>
+      <div class="sidebar-icon">
+        <img id="clock" src="<?php bloginfo('template_directory'); ?>/img/clock.png"/>
+          <div id="label" class="sidebar-label">
+            <?php
+            $u_time = get_the_time('U');
+            $u_modified_time = get_the_modified_time('U');
+            if ($u_modified_time >= $u_time + 86400) {
+              echo the_modified_time('F jS, Y');
+              ?> <br> <?php
+              echo the_modified_time();
+            }
+            ?>
+          </div>
+      </div>
     </div>
   </div>
 

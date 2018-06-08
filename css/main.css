@@ -112,22 +112,37 @@ h1 {
 }
 
 .sidebar-icon {
+  position: relative;
   width: inherit;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   height: 60px;
-  color: white;
   z-index: 200;
 }
 
-.sidebar-icon {
-  color: white;
+.sidebar-icon img {
+  margin: 0 auto;
+  height: 20px;
+  width: 20px;
+  visibility: visible;
 }
 
-.sidebar-icon a:visited {
+.sidebar-label {
+  font-size: 8pt;
   color: white;
+  width: inherit;
+  z-index: 200;
+  visibility: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  position: absolute;
 }
 
 .header-background {
