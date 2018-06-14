@@ -112,21 +112,33 @@ h1 {
 }
 
 .sidebar-icon {
-  position: relative;
   width: inherit;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+
   height: 60px;
   z-index: 200;
+
+  /* padding: 0; */
+  /* margin: 0; */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-icon img {
-  margin: 0 auto;
+.sidebar-img {
   height: 20px;
   width: 20px;
   visibility: visible;
+
+  position: absolute;
+}
+
+.sidebar-img img {
+  height: inherit;
+  width: inherit;
 }
 
 .sidebar-label {
@@ -136,13 +148,9 @@ h1 {
   z-index: 200;
   visibility: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-
-  margin: 0 auto;
   position: absolute;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .header-background {

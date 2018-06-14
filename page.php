@@ -42,13 +42,13 @@
       // Hover on top
       $(this).css("background-color", "#117cb1");
       $(this).css("transition", "0.5s");
-      $(this).children("img").css("visibility", "hidden");
+      $(this).children(".sidebar-img").css("visibility", "hidden");
       $(this).children("#label").css("visibility", "visible");
     }, function() {
       // Hover away from
       $(this).css("background-color", "transparent");
       $(this).css("transition", "0.5s");
-      $(this).children("img").css("visibility", "visible");
+      $(this).children(".sidebar-img").css("visibility", "visible");
       $(this).children("#label").css("visibility", "hidden");
     });
   });
@@ -60,21 +60,15 @@
     <div class="arrow-down"></div>
     <div class="sidebar-icon-wrapper">
       <div class="sidebar-icon">
-        <img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/>
+        <div class="sidebar-img"><img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/></div>
         <div id="label" class="sidebar-label">USER</div>
       </div>
       <div class="sidebar-icon">
-        <img id="clock" src="<?php bloginfo('template_directory'); ?>/img/clock.png"/>
+        <div class="sidebar-img"><img id="clock" src="<?php bloginfo('template_directory'); ?>/img/clock.png"/></div>
           <div id="label" class="sidebar-label">
             <?php
-            $u_time = get_the_time('U');
-            $u_modified_time = get_the_modified_time('U');
-            if ($u_modified_time >= $u_time + 86400) {
-              echo the_modified_time('F jS, Y');
-              ?> <br> <?php
-              echo the_modified_time();
-            }
-            ?>
+            echo human_time_diff(get_the_modified_time('U'), time());
+            ?> ago time time
           </div>
       </div>
     </div>
