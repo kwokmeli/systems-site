@@ -60,6 +60,33 @@ h1 {
   font-size: 14pt !important;
 }
 
+.submenu-block-wrapper {
+  text-align: center;
+}
+
+.submenu-block {
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  background: #f0eeee;
+  color: #8a8888;
+  display: inline-block;
+  margin: 25px 25px 25px 25px;
+  padding: 8px 8px 8px 8px;
+  font-size: 11pt;
+}
+
+.submenu-block h1 {
+  color: #2e2d2d;
+  font-weight: 600;
+}
+
+.submenu-block img {
+  padding-top: 8px;
+  height: 55px;
+  width: 55px;
+}
+
 .arrow-down {
   width: 0;
   height: 0;
@@ -90,14 +117,14 @@ h1 {
   z-index: 10;
 }
 
-.sidebar-button:hover {
+/* .sidebar-button:hover {
   background-color: #117cb1;
   cursor: default;
 }
 
 .sidebar-button:hover + .arrow-down {
   border-top: 4px solid #117cb1;
-}
+} */
 
 .sidebar {
   text-align: center;
