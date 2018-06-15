@@ -585,14 +585,14 @@ input[type=submit]:hover {
 }
 
 /* Remove open dropdown menu if window expands */
-@media (min-width: 1462px) {
+@media (min-width: 591px) {
   .vertical-header {
     display: none;
   }
 }
 
 /* Shrink header tabs to a dropdown menu */
-@media (max-width: 1461px) {
+@media (max-width: 590px) {
   #header {
     display: none;
   }
@@ -610,7 +610,7 @@ input[type=submit]:hover {
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 710px) {
   /* Increase the white space below the main logo to make room for the search bar */
   .blog-header {
     height: 200px;
@@ -630,6 +630,8 @@ input[type=submit]:hover {
 
   .header-logo {
     display: inline-block;
+    /* Left offset is 60px to make up for the width of the sidebar, which is also 60px */
+    margin-left: 60px;
   }
 
   .header-wrapper {
@@ -640,5 +642,19 @@ input[type=submit]:hover {
   /* Re-position search button */
   input[type=submit] {
     right: -9px;
+  }
+}
+
+@media (max-width: 634px) {
+  .page {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width 512px) {
+  .page {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
