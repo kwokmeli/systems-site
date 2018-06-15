@@ -74,7 +74,7 @@
         <div id="label" class="sidebar-label">User</div>
       </div>
       <div class="sidebar-icon">
-        <div class="sidebar-img"><img id="clock" src="<?php bloginfo('template_directory'); ?>/img/clock.png"/></div>
+        <div class="sidebar-img"><img id="clock" src="<?php bloginfo('template_directory'); ?>/img/calendar.png"/></div>
         <div id="label" class="sidebar-label">
           <?php
           echo human_time_diff(get_the_modified_time('U'), time());
@@ -152,7 +152,8 @@
       <?php
       $args = array (
         // Only pages whose parent is the home page should be displayed in the header tabs
-        'parent' => get_option('page_on_front')
+        'parent' => get_option('page_on_front'),
+        'sort_column' => 'menu_order'
       );
       $pages = get_pages($args); // Array of pages whose parent is the home page
       // Check what page you are on, so that the corresponding tab is "selected"

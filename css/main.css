@@ -70,21 +70,24 @@ h1 {
   width: 300px;
   background: #f0eeee;
   color: #8a8888;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 25px 25px 25px 25px;
-  padding: 8px 8px 8px 8px;
+  padding: 60px 18px 25px 18px;
   font-size: 11pt;
+
+  display: inline-block;
+  vertical-align: top;
 }
 
 .submenu-block h1 {
   color: #2e2d2d;
   font-weight: 600;
+  font-size: 16pt !important;
 }
 
 .submenu-block img {
-  padding-top: 8px;
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
 }
 
 .arrow-down {
