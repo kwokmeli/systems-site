@@ -55,11 +55,11 @@
     $(".submenu-block").hover(function() {
       // Hover on top
       $(this).css("background", "#e4e0e0");
-      $(this).css("transition", "0.5s");
+      $(this).css("transition", "0.75s");
     }, function() {
       // Hover away from
       $(this).css("background", "#f0eeee");
-      $(this).css("transition", "0.5s");
+      $(this).css("transition", "0.75s");
     });
   });
   </script>
@@ -109,7 +109,8 @@
           <?php
           $args = array (
             // Only pages whose parent is the home page should be displayed in the header tabs
-            'parent' => get_option('page_on_front')
+            'parent' => get_option('page_on_front'),
+            'sort_column' => 'menu_order'
           );
           $pages = get_pages($args); // Array of pages whose parent is the home page
           // Check what page you are on, so that the corresponding tab is "selected"

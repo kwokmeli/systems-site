@@ -1,6 +1,8 @@
 html {
   height: 100%;
   box-sizing: border-box;
+
+  overflow-x: hidden;
 }
 
 *,
@@ -21,6 +23,8 @@ body {
   background-color: #fafafa;
   font-size: 14pt;
   font-weight: 300;
+
+  overflow-x: hidden;
 }
 
 a:link {
@@ -57,7 +61,13 @@ th {
 h1 {
   color: #696969;
   font-weight: 700;
-  font-size: 14pt !important;
+  font-size: 18pt !important;
+}
+
+.border {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cfcdcd;
 }
 
 .submenu-block-wrapper {
@@ -361,7 +371,7 @@ h1 {
 /* Styles the content on every page of content */
 .page {
   color: #696969;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 55px;
   margin-right: 55px;
   font-size: 12pt;
@@ -434,6 +444,11 @@ i {
 .header-logo a:visited {
   border-bottom: 0 !important;
   text-decoration: none !important;
+}
+
+.header-logo img {
+  height: 82px;
+  width: auto;
 }
 
 .search-results-title-text {
@@ -621,6 +636,8 @@ input[type=submit]:hover {
     margin-top: 30px;
     float: none;
     display: inline-block;
+
+    margin-left: 5px;
   }
 
   .search-wrapper {
@@ -652,9 +669,49 @@ input[type=submit]:hover {
   }
 }
 
-@media (max-width 512px) {
+@media (max-width: 563px) {
+  .header-logo img {
+    height: 70px !important;
+    width: auto;
+  }
+}
+
+@media (max-width: 512px) {
   .page {
     margin-left: 5px;
     margin-right: 5px;
+  }
+}
+
+@media (max-width: 452px) {
+  .header-logo img {
+    height: 60px !important;
+    width: auto;
+    margin-left: -30px;
+  }
+
+  .submenu-block {
+    transition: 0.5s;
+    height: 250px;
+    width: 250px;
+  }
+
+  .submenu-block h1 {
+    color: #2e2d2d;
+    font-weight: 600;
+    font-size: 13pt !important;
+  }
+
+  .submenu-block img {
+    /* height: 50px;
+    width: 50px; */
+
+    margin-top: -30px;
+  }
+}
+
+@media (min-width: 452px) {
+  .submenu-block {
+    transition: 0.5s;
   }
 }
