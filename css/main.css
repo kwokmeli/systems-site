@@ -687,7 +687,7 @@ input[type=submit]:hover {
   .header-logo img {
     height: 60px !important;
     width: auto;
-    margin-left: -30px;
+    margin-left: -25px;
   }
 
   .submenu-block {
@@ -703,6 +703,10 @@ input[type=submit]:hover {
 
   .submenu-block img {
     margin-top: -30px;
+  }
+
+  .search-box {
+    margin-left: 20px;
   }
 }
 

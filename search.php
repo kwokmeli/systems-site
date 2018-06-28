@@ -36,8 +36,64 @@ $(document).ready(function() {
   $(".m-title").click(function() {
     load($(this));
   });
+
+  // Animation for hovering over sidebar icons
+  $(".sidebar-icon").hover(function() {
+    // Hover on top
+    $(this).css("background-color", "#117cb1");
+    $(this).css("transition", "0.5s");
+    $(this).children(".sidebar-img").css("visibility", "hidden");
+    $(this).children("#label").css("visibility", "visible");
+  }, function() {
+    // Hover away from
+    $(this).css("background-color", "transparent");
+    $(this).css("transition", "0.5s");
+    $(this).children(".sidebar-img").css("visibility", "visible");
+    $(this).children("#label").css("visibility", "hidden");
+  });
+
+  $(".submenu-block").hover(function() {
+    // Hover on top
+    $(this).css("background", "#e4e0e0");
+    $(this).css("transition", "0.75s");
+  }, function() {
+    // Hover away from
+    $(this).css("background", "#f0eeee");
+    $(this).css("transition", "0.75s");
+  });
 });
 </script>
+
+<!-- Creates the sidebar -->
+<div class="sidebar">
+  <div id="sidebar-toggle" class="sidebar-button">&#9776;</div>
+  <div class="arrow-down"></div>
+  <div class="sidebar-icon-wrapper">
+    <div class="sidebar-icon">
+      <div class="sidebar-img"><img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/></div>
+      <div id="label" class="sidebar-label">
+      User:
+      <?php $current_user = wp_get_current_user(); echo $current_user->user_login;?>
+      </div>
+    </div>
+    <div class="sidebar-icon">
+      <div class="sidebar-img"><img id="clock" src="<?php bloginfo('template_directory'); ?>/img/calendar.png"/></div>
+      <div id="label" class="sidebar-label">
+        <?php
+        echo human_time_diff(get_the_modified_time('U'), time());
+        ?> ago
+      </div>
+    </div>
+    <a href="mailto:syshelp@hsl.washington.edu">
+      <div class="sidebar-icon">
+        <div class="sidebar-img"><img src="<?php bloginfo('template_directory'); ?>/img/ticket.png"/></div>
+        <div id="label" class="sidebar-label">
+          Send a Ticket
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
 
 <!-- PHP for the dropdown menu when the screen width is too narrow -->
 <div id="menu-container">
@@ -52,7 +108,8 @@ $(document).ready(function() {
         <?php
         $args = array (
           // Only pages whose parent is the home page should be displayed in the header tabs
-          'parent' => get_option('page_on_front')
+          'parent' => get_option('page_on_front'),
+          'sort_column' => 'menu_order'
         );
         $pages = get_pages($args); // Array of pages whose parent is the home page
         // Check what page you are on, so that the corresponding tab is "selected"
@@ -75,7 +132,8 @@ $(document).ready(function() {
     <?php
     $args = array (
       // Only pages whose parent is the home page should be displayed in the header tabs
-      'parent' => get_option('page_on_front')
+      'parent' => get_option('page_on_front'),
+      'sort_column' => 'menu_order'
     );
     $pages = get_pages($args); // Array of pages whose parent is the home page
     // Check what page you are on, so that the corresponding tab is "selected"
