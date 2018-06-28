@@ -694,18 +694,14 @@ input[type=submit]:hover {
     transition: 0.5s;
     height: 250px;
     width: 250px;
+    font-size: 9.5pt !important;
   }
 
   .submenu-block h1 {
-    color: #2e2d2d;
-    font-weight: 600;
     font-size: 13pt !important;
   }
 
   .submenu-block img {
-    /* height: 50px;
-    width: 50px; */
-
     margin-top: -30px;
   }
 }
