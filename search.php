@@ -159,7 +159,13 @@ Home
             <a href="<?php the_permalink(); ?>">
               <div class="search-results-header"> <?php echo $count; ?>. <?php echo get_the_title(); ?> </div>
             </a>
-				<div class="search-results-text"><?php echo get_the_excerpt(); ?></div>
+				<div class="search-results-text"><?php
+          if (get_the_excerpt() == '') {
+            echo 'No excerpt available.';
+          } else {
+            echo get_the_excerpt();
+          }
+         ?></div>
         <?php $count = $count + 1; ?>
 	<?php endwhile;
 
