@@ -4,7 +4,7 @@
   <!-- <a href="https://www.facebook.com/uwhsl"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"/></a>
   <a href="https://twitter.com/uwhsl"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"/></a> -->
 
-  <div class="footer-link"><a href="~sitemap/">Sitemap</a></div>
+  <div class="footer-link"><a href="/sitemap/">Sitemap</a></div>
   <div class="footer-link"><a href="mailto:syshelp@hsl.washington.edu">Contact</a></div>
   <div class="footer-link"><a href="">About</a></div>
 
