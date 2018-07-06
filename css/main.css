@@ -80,12 +80,11 @@ h1 {
   width: 300px;
   background: #f0eeee;
   color: #8a8888;
-  /* display: inline-block; */
+  display: inline-block;
   margin: 25px 25px 25px 25px;
   padding: 60px 18px 25px 18px;
   font-size: 11pt;
 
-  display: inline-block;
   vertical-align: top;
 }
 
@@ -374,7 +373,7 @@ h1 {
   margin-top: 20px;
   margin-left: 55px;
   margin-right: 55px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   font-size: 12pt;
 }
 

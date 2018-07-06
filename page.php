@@ -201,9 +201,13 @@
 
   <!-- Show page content -->
   <div class="page">
-  <?php echo get_post_field('post_content', $post->ID); ?>
+  <!-- <?php echo get_post_field('post_content', $post->ID); ?> -->
+
+  <?php if (have_posts()) : while (have_posts()) : the_post();
+  the_content();
+  endwhile; endif; ?>
+
   </div>
-  &nbsp;
 
   <!-- Show footer -->
   <?php get_footer(); ?>
