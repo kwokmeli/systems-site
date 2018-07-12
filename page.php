@@ -37,6 +37,7 @@
       load($(this));
     });
 
+    // Sidebar: 60px
     // Animation for hovering over sidebar icons
     $(".sidebar-icon").hover(function() {
       // Hover on top
@@ -61,6 +62,44 @@
       $(this).css("background", "#f0eeee");
       $(this).css("transition", "0.75s");
     });
+
+    $(".sidebar-button").click(function() {
+      if ($(".sidebar").css("width") == "150px") {
+        // Collapse sidebar
+        $(".sidebar").css("width", "60px");
+        $("body").css("margin", "0px 0px 0px 60px");
+        $(".sidebar-icon").removeClass("open");
+        $(".sidebar-img").removeClass("open");
+
+        $(".sidebar-icon").children("#label").css("visibility", "hidden");
+
+      } else {
+        // Expand sidebar
+        $(".sidebar").css("width", "150px");
+        // $(".sidebar").css("text-align", "left");
+        $("body").css("margin", "0px 0px 0px 150px");
+        $(".sidebar-icon").addClass("open");
+        $(".sidebar-img").addClass("open");
+
+        $(".sidebar-icon.open").children("#label").css("visibility", "visible");
+        $(".sidebar-icon.open").children(".sidebar-img").css("visibility", "visible");
+
+        $(".sidebar-icon.open").hover(function() {
+          // Hover on top
+          $(this).css("background-color", "#117cb1");
+          $(this).children("#label").css("visibility", "visible");
+          $(this).children(".sidebar-img.open").css("visibility", "visible");
+
+        }, function() {
+          // Hover away from
+          $(this).css("background-color", "transparent");
+          $(this).children("#label").css("visibility", "visible");
+          $(this).children(".sidebar-img.open").css("visibility", "visible");
+
+        });
+
+      }
+    });
   });
   </script>
 
@@ -74,10 +113,9 @@
         <div id="label" class="sidebar-label">
         <?php $netid = $_SERVER['REMOTE_USER'];
         if ($netid === NULL) {
-          ?> Not logged in <?php
+          ?> USER<?php
           ?> <?php
         } else {
-          ?> User: <?php
           echo $netid;
         } ?>
         </div>

@@ -16,7 +16,7 @@ body {
   /* margin: 0; */
 
   margin: 0px 0px 0px 60px;
-  /* margin-left: 120px; */
+  /* margin: 0px 0px 0px 120px; */
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -127,16 +127,25 @@ h1 {
   text-align: center;
   line-height: 60px;
   z-index: 10;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
-/* .sidebar-button:hover {
+.sidebar-button:hover {
   background-color: #117cb1;
   cursor: default;
 }
 
 .sidebar-button:hover + .arrow-down {
   border-top: 4px solid #117cb1;
-} */
+}
 
 .sidebar {
   text-align: center;
@@ -156,8 +165,7 @@ h1 {
   height: 60px;
   z-index: 200;
 
-  /* padding: 0; */
-  /* margin: 0; */
+  /* Sidebar: 60px */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -165,6 +173,17 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.sidebar-icon.open {
+  width: inherit;
+
+  height: 60px;
+  z-index: 200;
+  /* Sidebar: 120px */
+  display: flex;
+  align-items: center;
 }
 
 .sidebar-img {
@@ -173,6 +192,17 @@ h1 {
   visibility: visible;
 
   position: absolute;
+}
+
+.sidebar-img.open {
+  height: 20px;
+  width: 20px;
+  visibility: visible;
+
+  position: absolute;
+
+  /* Sidebar: 120px */
+  margin-left: -45px;
 }
 
 .sidebar-img img {
