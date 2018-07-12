@@ -167,7 +167,7 @@ Home
           }
          ?></div>
         <?php $count = $count + 1; ?>
-	<?php endwhile;
+	<?php endwhile; ?> &nbsp; <?php
 
 else : ?>
   <div class="search-results-title-text">No search results were found for query "<?php the_search_query(); ?>".</div>

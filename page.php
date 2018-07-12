@@ -72,8 +72,14 @@
       <div class="sidebar-icon">
         <div class="sidebar-img"><img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/></div>
         <div id="label" class="sidebar-label">
-        User:
-        <?php $current_user = wp_get_current_user(); echo $current_user->user_login;?>
+        <?php $netid = $_SERVER['REMOTE_USER'];
+        if ($netid === NULL) {
+          ?> Not logged in <?php
+          ?> <?php
+        } else {
+          ?> User: <?php
+          echo $netid;
+        } ?>
         </div>
       </div>
       <div class="sidebar-icon">
