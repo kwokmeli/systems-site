@@ -140,7 +140,7 @@ h1 {
 
 .sidebar-button:hover {
   background-color: #117cb1;
-  cursor: default;
+  cursor: pointer;
 }
 
 .sidebar-button:hover + .arrow-down {
@@ -159,6 +159,11 @@ h1 {
   overflow-x: hidden;
 }
 
+.sidebar.open {
+  /* text-align: left; */
+
+}
+
 .sidebar-icon {
   width: inherit;
 
@@ -173,17 +178,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .sidebar-icon.open {
-  width: inherit;
+  /* width: inherit; */
+  width: 150px;
 
   height: 60px;
   z-index: 200;
   /* Sidebar: 120px */
-  display: flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .sidebar-img {
@@ -199,10 +203,9 @@ h1 {
   width: 20px;
   visibility: visible;
 
-  position: absolute;
-
   /* Sidebar: 120px */
-  margin-left: -45px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .sidebar-img img {
@@ -213,13 +216,18 @@ h1 {
 .sidebar-label {
   font-size: 8pt;
   color: white;
-  width: inherit;
+  width: auto;
   z-index: 200;
   visibility: hidden;
 
   position: absolute;
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.sidebar-label.open {
+  margin-top: 25px;
+  margin-left: 50px;
 }
 
 .header-background {
