@@ -53,6 +53,7 @@
       $(this).children("#label").css("visibility", "hidden");
     });
 
+    // Animates background color transition of submenu blocks
     $(".submenu-block").hover(function() {
       // Hover on top
       $(this).css("background", "#e4e0e0");
@@ -63,9 +64,12 @@
       $(this).css("transition", "0.75s");
     });
 
+    // Controls expansion/collapse of sidebar when clicked
     $(".sidebar-button").click(function() {
       if ($(".sidebar").css("width") == "150px") {
         // Collapse sidebar
+        $(".logout").css("visibility", "hidden");
+        $(".arrow-right").css("visibility", "hidden");
         $(".sidebar").css("width", "60px");
         $("body").css("margin", "0px 0px 0px 60px");
         $(".sidebar-icon").removeClass("open");
@@ -85,11 +89,11 @@
           $(this).css("background-color", "transparent");
           $(this).children("#label").css("visibility", "hidden");
           $(this).children(".sidebar-img").css("visibility", "visible");
-
         });
 
       } else {
         // Expand sidebar
+        $(".arrow-right").css("visibility", "visible");
         $(".sidebar").css("width", "150px");
         $("body").css("margin", "0px 0px 0px 150px");
         $(".sidebar-icon").addClass("open");
@@ -111,8 +115,52 @@
           $(this).css("background-color", "transparent");
           $(this).children("#label").css("visibility", "visible");
           $(this).children(".sidebar-img.open").css("visibility", "visible");
-
         });
+      }
+    });
+
+    // Allow user to logout
+    $("#login").hover(function() {
+      $(this).css("cursor", "pointer");
+    }, function() {
+      $(this).css("cursor", "default");
+    });
+
+    $("#login").click(function() {
+      if ($(".sidebar").css("width") == "150px") {
+        if ($(".logout").css("visibility") == "hidden") {
+          $(".logout").css("visibility", "visible");
+        } else {
+          $(".logout").css("visibility", "hidden");
+        }
+      } else {
+        // Expand sidebar if collapsed login icon is clicked
+        // Expand sidebar
+        $(".arrow-right").css("visibility", "visible");
+        $(".sidebar").css("width", "150px");
+        $("body").css("margin", "0px 0px 0px 150px");
+        $(".sidebar-icon").addClass("open");
+        $(".sidebar-img").addClass("open");
+        $(".sidebar").addClass("open");
+        $(".sidebar-label").addClass("open");
+
+        $(".sidebar-icon.open").children("#label").css("visibility", "visible");
+        $(".sidebar-icon.open").children(".sidebar-img").css("visibility", "visible");
+
+        $(".sidebar-icon.open").hover(function() {
+          // Hover on top
+          $(this).css("background-color", "#117cb1");
+          $(this).children("#label").css("visibility", "visible");
+          $(this).children(".sidebar-img.open").css("visibility", "visible");
+
+        }, function() {
+          // Hover away from
+          $(this).css("background-color", "transparent");
+          $(this).children("#label").css("visibility", "visible");
+          $(this).children(".sidebar-img.open").css("visibility", "visible");
+        });
+        $(".logout").css("visibility", "visible");
+
       }
     });
 
@@ -120,11 +168,12 @@
   </script>
 
   <!-- Creates the sidebar -->
+  <div class="logout">Logout <img src="<?php bloginfo('template_directory'); ?>/img/logout.png" /></div>
   <div class="sidebar">
     <div id="sidebar-toggle" class="sidebar-button">&#9776;</div>
     <div class="arrow-down"></div>
     <div class="sidebar-icon-wrapper">
-      <div class="sidebar-icon">
+      <div id="login" class="sidebar-icon">
         <div class="sidebar-img"><img id="user" src="<?php bloginfo('template_directory'); ?>/img/user.png"/></div>
         <div id="label" class="sidebar-label">
         <?php $netid = $_SERVER['REMOTE_USER'];
@@ -135,6 +184,7 @@
           echo $netid;
         } ?>
         </div>
+        <div class="arrow-right"></div>
       </div>
       <div class="sidebar-icon">
         <div class="sidebar-img"><img id="clock" src="<?php bloginfo('template_directory'); ?>/img/calendar.png"/></div>

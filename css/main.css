@@ -24,6 +24,8 @@ body {
   font-size: 14pt;
   font-weight: 300;
 
+  z-index: 0;
+
   overflow-x: hidden;
 }
 
@@ -106,7 +108,22 @@ h1 {
   border-right: 4px solid transparent;
   border-top: 4px solid #09587e;
   margin: 0 auto;
+  z-index: 10;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  /* border-left: 4px solid #424547; */
+  border-left: 4px solid white;
+
   z-index: 100;
+  visibility: hidden;
+
+  margin-top: 25px;
+  float: right;
 }
 
 .arrow-down:hover {
@@ -153,7 +170,7 @@ h1 {
   position: fixed;
   background-color: black;
   width: 60px;
-  z-index: 10;
+  z-index: 100;
   left: 0;
   top: 0;
   overflow-x: hidden;
@@ -168,7 +185,7 @@ h1 {
   width: inherit;
 
   height: 60px;
-  z-index: 200;
+  z-index: 20;
 
   /* Sidebar: 60px */
   display: -webkit-box;
@@ -185,7 +202,7 @@ h1 {
   width: 150px;
 
   height: 60px;
-  z-index: 200;
+  z-index: 20;
   /* Sidebar: 120px */
   display: inline-block;
 }
@@ -196,6 +213,15 @@ h1 {
   visibility: visible;
 
   position: absolute;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .sidebar-img.open {
@@ -217,17 +243,52 @@ h1 {
   font-size: 8pt;
   color: white;
   width: auto;
-  z-index: 200;
+  z-index: 20;
   visibility: hidden;
 
   position: absolute;
   padding-left: 2px;
   padding-right: 2px;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .sidebar-label.open {
   margin-top: 25px;
   margin-left: 50px;
+}
+
+.logout {
+  position: absolute;
+  text-align: center;
+  margin-top: -54px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  height: 60px;
+  width: auto;
+  background-color: black;
+  opacity: 0.92;
+  font-size: 8pt;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  visibility: hidden;
+  z-index: 100;
+}
+
+.logout img {
+  height: 15px;
+  width: 15px;
+  margin-left: 12px;
 }
 
 .header-background {
