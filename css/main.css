@@ -739,14 +739,14 @@ input[type=submit]:hover {
 }
 
 /* Remove open dropdown menu if window expands */
-@media (min-width: 591px) {
+/* @media (min-width: 591px) {
   .vertical-header {
     display: none;
   }
-}
+} */
 
 /* Shrink header tabs to a dropdown menu */
-@media (max-width: 590px) {
+/* @media (max-width: 590px) {
   #header {
     display: none;
   }
@@ -762,82 +762,75 @@ input[type=submit]:hover {
   .page-title {
     margin-top: 24px;
   }
-}
+} */
 
-@media (max-width: 710px) {
+/* @media (max-width: 710px) { */
   /* Increase the white space below the main logo to make room for the search bar */
-  .blog-header {
+  /* .blog-header {
     height: 200px;
-  }
+  } */
 
   /* Re-position search bar */
-  .search-box {
+  /* .search-box {
     margin-top: 30px;
     float: none;
     display: inline-block;
 
     margin-left: 5px;
-  }
+  } */
 
-  .search-wrapper {
+  /* .search-wrapper {
     text-align: center;
     width: 100%;
   }
 
   .header-logo {
-    display: inline-block;
+    display: inline-block; */
     /* Left offset is 60px to make up for the width of the sidebar, which is also 60px */
-    margin-left: 60px;
-  }
+    /* margin-left: 60px;
+  } */
 
-  .header-wrapper {
+  /* .header-wrapper {
     text-align: center;
     width: 100%;
-  }
+  } */
 
   /* Re-position search button */
-  input[type=submit] {
+  /* input[type=submit] {
     right: -9px;
   }
-}
+} */
 
-@media (max-width: 634px) {
+/* @media (max-width: 634px) {
   .page {
     margin-left: 20px;
     margin-right: 20px;
   }
-}
+} */
 
-@media (max-width: 563px) {
+/* @media (max-width: 563px) {
   .header-logo img {
     height: 70px !important;
     width: auto;
   }
-}
+} */
 
-@media (max-width: 512px) {
-  .page {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 502px) {
+/* @media (max-width: 502px) {
   /* Adjust margins so footer doesn't vertically overflow */
-  .footer-link {
+  /* .footer-link {
     margin-left: 12px;
     margin-right: 12px;
   }
-}
+}  */
 
-@media (max-width: 466px) {
+/* @media (max-width: 466px) {
   .footer-divider {
     margin-top: 10px;
     margin-bottom: 8px;
   }
-}
+} */
 
-@media (max-width: 452px) {
+/* @media (max-width: 452px) {
   .header-logo img {
     height: 60px !important;
     width: auto;
@@ -862,10 +855,10 @@ input[type=submit]:hover {
   .search-box {
     margin-left: 20px;
   }
-}
+} */
 
-@media (min-width: 452px) {
+/* @media (min-width: 452px) {
   .submenu-block {
     transition: 0.5s;
   }
-}
+} */

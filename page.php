@@ -8,6 +8,7 @@
   <script>
   $(document).ready(function() {
     var last;
+    var $window = $(window);
 
     // Closes drawers
     function clear() {
@@ -161,7 +162,6 @@
           $(this).children(".sidebar-img.open").css("visibility", "visible");
         });
         $(".logout").css("visibility", "visible");
-
       }
     });
 
@@ -171,6 +171,136 @@
         $(".logout").css("visibility", "hidden");
       }
     });
+
+    // Resize elements on window resize
+    function checkWidth() {
+      var windowSize = $window.width();
+
+      if ($(".sidebar").css("width") == "150px") {
+        // Rules when the sidebar is expanded (150px)
+      } else {
+        // Rules when the sidebar is collapsed (60px)
+
+        //  Remove open dropdown menu if window expands
+        if (windowSize >= 591) {
+          $(".vertical-header").css("display", "none");
+        }
+
+        if (windowSize <= 710) {
+          // Increase the white space below the main logo to make room for the search bar
+          $(".blog-header").css("height", "200px");
+
+          // Re-position search bar
+          $(".search-box").css("margin-top", "30px");
+          $(".search-box").css("float", "none");
+          $(".search-box").css("display", "inline-block");
+          $(".search-box").css("margin-left", "5px");
+          $(".search-wrapper").css("text-align", "center");
+          $(".search-wrapper").css("width", "100%");
+          $(".header-logo").css("display", "inline-block");
+          // Left offset is 60px to make up for the width of the sidebar, which is also 60px
+          $(".header-logo").css("margin-left", "60px");
+          $(".header-wrapper").css("text-align", "center");
+          $(".header-wrapper").css("width", "100%");
+          // Re-position search button
+          $("input[type=submit]").css("right", "-9px");
+        } else {
+          $(".blog-header").css("height", "114px");
+
+          $(".search-box").css("margin-top", "-53px");
+          $(".search-box").css("float", "right");
+          $(".search-box").css("display", "");
+          $(".search-box").css("margin-left", "");
+          $(".search-wrapper").css("text-align", "");
+          $(".search-wrapper").css("width", "");
+          $(".header-logo").css("display", "");
+          $(".header-logo").css("margin-left", "10px");
+          $(".header-wrapper").css("text-align", "");
+          $(".header-wrapper").css("width", "");
+          $("input[type=submit]").css("right", "-5px");
+        }
+
+        if (windowSize <= 634) {
+          $(".page").css("margin-left", "20px");
+          $(".page").css("margin-right", "20px");
+        } else {
+          $(".page").css("margin-left", "55px");
+          $(".page").css("margin-right", "55px");
+        }
+
+        // Shrink header tabs to a dropdown menu
+        if (windowSize <= 590) {
+          $("#header").css("display", "none");
+          $(".you-are-here").css("margin-top", "0px");
+          $("#menu-container").css("visibility", "visible");
+          $(".page-title").css("margin-top", "24px");
+        } else {
+          $("#header").css("display", "");
+          $(".you-are-here").css("margin-top", "46px");
+          $("#menu-container").css("visibility", "hidden");
+          $(".page-title").css("margin-top", "20px");
+        }
+
+        if (windowSize <= 563) {
+          $(".header-logo img").css("height", "70px"); // TODO: Add !important
+        } else {
+          $(".header-logo img").css("height", "82px");
+        }
+
+        // Adjust margins so footer doesn't vertically overflow
+        if (windowSize <= 502) {
+          $(".footer-link").css("margin-left", "12px");
+          $(".footer-link").css("margin-right", "12px");
+        } else {
+          $(".footer-link").css("margin-left", "28px");
+          $(".footer-link").css("margin-right", "28px");
+        }
+
+        if (windowSize <= 466) {
+          $(".footer-divider").css("margin-top", "10px");
+          $(".footer-divider").css("margin-bottom", "8px");
+        } else {
+          $(".footer-divider").css("margin-top", "20px");
+          $(".footer-divider").css("margin-bottom", "18px");
+        }
+
+        if (windowSize <= 452) {
+          $(".header-logo img").css("height", "60px"); // TODO: Add !important
+          $(".header-logo img").css("margin-left", "-25px");
+
+          $(".submenu-block").css("transition", "0.5s");
+          $(".submenu-block").css("height", "250px");
+          $(".submenu-block").css("width", "250px");
+          $(".submenu-block").css("font-size", "9.5pt"); // TODO: Add !important
+
+          $(".submenu-block h1").css("font-size", "13pt"); // TODO: Add !important
+
+          $(".submenu-block img").css("margin-top", "-30px");
+
+          $(".search-box").css("margin-left", "20px");
+        } else {
+          $(".header-logo img").css("height", "70px");
+          $(".header-logo img").css("margin-left", "");
+
+          $(".submenu-block").css("transition", "0.5s");
+          $(".submenu-block").css("height", "300px");
+          $(".submenu-block").css("width", "300px");
+          $(".submenu-block").css("font-size", "11pt");
+
+          $(".submenu-block h1").css("font-size", "16pt");
+
+          $(".submenu-block img").css("margin-top", "");
+
+          $(".search-box").css("margin-left", "5px");
+        }
+      }
+    }
+
+    // Execute on load
+    checkWidth();
+
+    // Bind event listener
+    $(window).resize(checkWidth);
 
   });
   </script>
