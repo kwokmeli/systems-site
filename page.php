@@ -126,7 +126,8 @@
       $(this).css("cursor", "default");
     });
 
-    $("#login").click(function() {
+    $("#login").click(function(event) {
+      event.stopPropagation();
       if ($(".sidebar").css("width") == "150px") {
         if ($(".logout").css("visibility") == "hidden") {
           $(".logout").css("visibility", "visible");
@@ -161,6 +162,13 @@
         });
         $(".logout").css("visibility", "visible");
 
+      }
+    });
+
+    // Hide logout option when user clicks away
+    $(document).click(function() {
+      if ($(".logout").css("visibility") == "visible") {
+        $(".logout").css("visibility", "hidden");
       }
     });
 

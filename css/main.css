@@ -60,6 +60,10 @@ th {
   font-weight: 400;
 }
 
+a {
+  cursor: pointer;
+}
+
 h1 {
   color: #696969;
   font-weight: 700;
@@ -283,6 +287,15 @@ h1 {
 
   visibility: hidden;
   z-index: 100;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .logout img {
