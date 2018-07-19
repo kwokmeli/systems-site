@@ -346,6 +346,15 @@ h1 {
 #header li {
   float: left;
   margin: 0 0 0 0;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 #header a {
@@ -523,6 +532,15 @@ h1 {
   -webkit-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
   -moz-box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
   box-shadow: inset 0 15px 20px -20px rgba(0,0,0,0.8);
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .you-are-here a {

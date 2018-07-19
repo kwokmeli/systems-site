@@ -34,9 +34,10 @@
     }
 
     // Listens for header clicks
-    $(".m-title").click(function() {
-      load($(this));
-    });
+    // $(".m-title").click(function() {
+    //   load($(this));
+    // });
+
 
     // Sidebar: 60px
     // Animation for hovering over sidebar icons
@@ -179,6 +180,13 @@
 
       if ($(".sidebar").css("width") == "150px") {
         // Rules when the sidebar is expanded (150px)
+        //  Remove open dropdown menu if window expands
+        if (windowSize >= 664) {
+          $(".vertical-header").css("display", "none");
+        } else {
+          $(".vertical-header").css("display", "");
+        }
+
         // Re-position search bar
         if (windowSize <= 769) {
           // Increase the white space below the main logo to make room for the search bar
@@ -227,10 +235,12 @@
           $("#menu-container").css("visibility", "visible");
           $(".page-title").css("margin-top", "24px");
         } else {
+          // Expand dropdown menu into header tabs
           $("#header").css("display", "");
           $(".you-are-here").css("margin-top", "46px");
           $("#menu-container").css("visibility", "hidden");
           $(".page-title").css("margin-top", "20px");
+          clear();
         }
 
 
@@ -239,6 +249,8 @@
         //  Remove open dropdown menu if window expands
         if (windowSize >= 591) {
           $(".vertical-header").css("display", "none");
+        } else {
+          $(".vertical-header").css("display", "");
         }
 
         if (windowSize <= 710) {
@@ -290,10 +302,12 @@
           $("#menu-container").css("visibility", "visible");
           $(".page-title").css("margin-top", "24px");
         } else {
+          // Expand dropdown menu into header tabs
           $("#header").css("display", "");
           $(".you-are-here").css("margin-top", "46px");
           $("#menu-container").css("visibility", "hidden");
           $(".page-title").css("margin-top", "20px");
+          clear();
         }
 
         if (windowSize <= 563) {
@@ -357,7 +371,15 @@
     // Bind event listener
     $(window).resize(checkWidth);
 
+    $(document).on("click", ".m-title", function(event) {
+      event.stopPropagation();
+      load($(this));
+    });
+
   });
+
+
+
   </script>
 
   <!-- Creates the sidebar -->
