@@ -270,7 +270,8 @@ h1 {
 }
 
 .logout {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   text-align: center;
   margin-top: -54px;
   padding-left: 20px;
@@ -421,6 +422,15 @@ h1 {
   float: right !important;
   align-self: center;
   font-size: 11pt;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .drawer {
@@ -546,6 +556,15 @@ i {
 .header-logo {
   margin-left: 10px;
   margin-top: 5px;
+
+  /* Prevent highlighting of text */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .header-logo a {

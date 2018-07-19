@@ -118,6 +118,7 @@
           $(this).children(".sidebar-img.open").css("visibility", "visible");
         });
       }
+      checkWidth();
     });
 
     // Allow user to logout
@@ -178,9 +179,63 @@
 
       if ($(".sidebar").css("width") == "150px") {
         // Rules when the sidebar is expanded (150px)
+        // Re-position search bar
+        if (windowSize <= 769) {
+          // Increase the white space below the main logo to make room for the search bar
+          $(".blog-header").css("height", "200px");
+
+          $(".search-box").css("margin-top", "30px");
+          $(".search-box").css("float", "none");
+          $(".search-box").css("display", "inline-block");
+          $(".search-box").css("margin-left", "5px");
+          $(".search-wrapper").css("text-align", "center");
+          $(".search-wrapper").css("width", "100%");
+          $(".header-logo").css("display", "inline-block");
+          // Left offset is 60px to make up for the width of the sidebar, which is also 60px
+          $(".header-logo").css("margin-left", "65px");
+          $(".header-wrapper").css("text-align", "center");
+          $(".header-wrapper").css("width", "100%");
+          // Re-position search button
+          $("input[type=submit]").css("right", "-9px");
+          // Re-position logout button
+          $(".logout").css("margin-top", "-140px");
+
+        } else {
+          $(".blog-header").css("height", "114px");
+
+          $(".search-box").css("margin-top", "-53px");
+          $(".search-box").css("float", "right");
+          $(".search-box").css("display", "");
+          $(".search-box").css("margin-left", "");
+          $(".search-wrapper").css("text-align", "");
+          $(".search-wrapper").css("width", "");
+          $(".header-logo").css("display", "");
+
+          $(".header-logo").css("margin-left", "10px");
+          $(".header-wrapper").css("text-align", "");
+          $(".header-wrapper").css("width", "");
+
+          $("input[type=submit]").css("right", "-5px");
+          $(".logout").css("margin-top", "-54px");
+        }
+
+
+        if (windowSize <= 663) {
+          // Shrink header tabs to a dropdown menu
+          $("#header").css("display", "none");
+          $(".you-are-here").css("margin-top", "0px");
+          $("#menu-container").css("visibility", "visible");
+          $(".page-title").css("margin-top", "24px");
+        } else {
+          $("#header").css("display", "");
+          $(".you-are-here").css("margin-top", "46px");
+          $("#menu-container").css("visibility", "hidden");
+          $(".page-title").css("margin-top", "20px");
+        }
+
+
       } else {
         // Rules when the sidebar is collapsed (60px)
-
         //  Remove open dropdown menu if window expands
         if (windowSize >= 591) {
           $(".vertical-header").css("display", "none");
