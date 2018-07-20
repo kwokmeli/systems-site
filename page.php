@@ -211,7 +211,7 @@
         } else {
           $(".blog-header").css("height", "114px");
 
-          $(".search-box").css("margin-top", "-53px");
+          $(".search-box").css("margin-top", "-60px");
           $(".search-box").css("float", "right");
           $(".search-box").css("display", "");
           $(".search-box").css("margin-left", "");
@@ -266,7 +266,7 @@
           $(".search-wrapper").css("width", "100%");
           $(".header-logo").css("display", "inline-block");
           // Left offset is 60px to make up for the width of the sidebar, which is also 60px
-          $(".header-logo").css("margin-left", "60px");
+          $(".header-logo").css("margin-left", "15px");
           $(".header-wrapper").css("text-align", "center");
           $(".header-wrapper").css("width", "100%");
           // Re-position search button
@@ -274,7 +274,7 @@
         } else {
           $(".blog-header").css("height", "114px");
 
-          $(".search-box").css("margin-top", "-53px");
+          $(".search-box").css("margin-top", "-60px");
           $(".search-box").css("float", "right");
           $(".search-box").css("display", "");
           $(".search-box").css("margin-left", "");
@@ -312,8 +312,13 @@
 
         if (windowSize <= 563) {
           $(".header-logo img").css("height", "70px"); // TODO: Add !important
+          $(".blog-header").css("height", "170px");
+
+        } else if (windowSize <= 710) {
+          $(".blog-header").css("height", "200px");
         } else {
-          $(".header-logo img").css("height", "82px");
+          $(".header-logo img").css("height", "92px");
+          $(".blog-header").css("height", "114px");
         }
 
         // Adjust margins so footer doesn't vertically overflow
@@ -335,7 +340,7 @@
 
         if (windowSize <= 452) {
           $(".header-logo img").css("height", "60px"); // TODO: Add !important
-          $(".header-logo img").css("margin-left", "-25px");
+          $(".header-logo img").css("margin-left", "15px");
 
           $(".submenu-block").css("transition", "0.5s");
           $(".submenu-block").css("height", "250px");
@@ -347,8 +352,23 @@
           $(".submenu-block img").css("margin-top", "-30px");
 
           $(".search-box").css("margin-left", "20px");
-        } else {
+        } else if (windowSize <= 563) {
           $(".header-logo img").css("height", "70px");
+          $(".header-logo img").css("margin-left", "");
+
+          $(".submenu-block").css("transition", "0.5s");
+          $(".submenu-block").css("height", "300px");
+          $(".submenu-block").css("width", "300px");
+          $(".submenu-block").css("font-size", "11pt");
+
+          $(".submenu-block h1").css("font-size", "16pt");
+
+          $(".submenu-block img").css("margin-top", "");
+
+          $(".search-box").css("margin-left", "5px");
+
+        } else {
+          $(".header-logo img").css("height", "92px");
           $(".header-logo img").css("margin-left", "");
 
           $(".submenu-block").css("transition", "0.5s");
