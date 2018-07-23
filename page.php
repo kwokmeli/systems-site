@@ -33,12 +33,6 @@
       }
     }
 
-    // Listens for header clicks
-    // $(".m-title").click(function() {
-    //   load($(this));
-    // });
-
-
     // Sidebar: 60px
     // Animation for hovering over sidebar icons
     $(".sidebar-icon").hover(function() {
@@ -143,6 +137,7 @@
         // Expand sidebar
         $(".arrow-right").css("visibility", "visible");
         $(".sidebar").css("width", "150px");
+        checkWidth();
         $("body").css("margin", "0px 0px 0px 150px");
         $(".sidebar-icon").addClass("open");
         $(".sidebar-img").addClass("open");
@@ -228,7 +223,6 @@
           $(".logout").css("margin-top", "-54px");
         }
 
-
         if (windowSize <= 663) {
           // Shrink header tabs to a dropdown menu
           $("#header").css("display", "none");
@@ -251,7 +245,6 @@
           $(".page").css("margin-left", "55px");
           $(".page").css("margin-right", "55px");
         }
-
 
         if (windowSize <= 604) {
           $(".header-logo img").css("height", "70px"); // TODO: Add !important
@@ -343,7 +336,6 @@
           $("#s").css("width", "");
           $(".header-logo img").css("height", "92px");
         }
-
 
       } else {
         // Rules when the sidebar is collapsed (60px)
@@ -492,15 +484,13 @@
     // Bind event listener
     $(window).resize(checkWidth);
 
+    // Listen for clicks on menu button
     $(document).on("click", ".m-title", function(event) {
       event.stopPropagation();
       load($(this));
     });
 
   });
-
-
-
   </script>
 
   <!-- Creates the sidebar -->
@@ -514,7 +504,7 @@
         <div id="label" class="sidebar-label">
         <?php $netid = $_SERVER['REMOTE_USER'];
         if ($netid === NULL) {
-          ?> USER<?php
+          ?>Not logged in<?php
           ?> <?php
         } else {
           echo $netid;
