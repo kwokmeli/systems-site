@@ -638,7 +638,7 @@
   </div>
   <div class="page">
     <h1>Sitemap</h1>
-    <?php wp_list_pages(array('exclude' => '', 'title_li' => '')); // Exclude pages by ID ?>
+    <?php wp_list_pages('title_li=&echo=1&exclude_password_protected=1'); // Exclude pages by ID ?>
 
  </div>
   <?php get_footer(); ?>

@@ -23,19 +23,19 @@ function ep_exclude_password_protected_pages($pages, $r) {
 
 add_filter("get_pages", "ep_exclude_password_protected_pages", 10, 2);
 
-add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 
 add_action('wp_enqueue_scripts', 'hslSystems_scripts');
 
 // REMOVE THIS FUNCTION IF NOT DEBUGGING
-if (!function_exists('write_log')) {
-	function write_log($log) {
-		if (is_array($log) || is_object($log)) {
-			error_log(print_r($log, true));
-		} else {
-			error_log($log);
-		}
-	}
-}
+// if (!function_exists('write_log')) {
+// 	function write_log($log) {
+// 		if (is_array($log) || is_object($log)) {
+// 			error_log(print_r($log, true));
+// 		} else {
+// 			error_log($log);
+// 		}
+// 	}
+// }
 
 ?>
