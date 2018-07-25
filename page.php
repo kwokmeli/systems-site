@@ -494,7 +494,7 @@
   </script>
 
   <!-- Creates the sidebar -->
-  <div class="logout">Logout <img src="<?php bloginfo('template_directory'); ?>/img/logout.png" /></div>
+  <a href="/Shibboleth.sso/Logout"><div class="logout">Logout <img src="<?php bloginfo('template_directory'); ?>/img/logout.png" /></div></a>
   <div class="sidebar">
     <div id="sidebar-toggle" class="sidebar-button">&#9776;</div>
     <div class="arrow-down"></div>

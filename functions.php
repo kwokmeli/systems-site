@@ -4,6 +4,7 @@ function hslSystems_scripts() {
 	wp_enqueue_style('blog', get_template_directory_uri() . '/css/main.css');
 }
 
+// Add custom Google font
 function wpb_add_google_fonts() {
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600', false );
 }
@@ -21,7 +22,17 @@ function ep_exclude_password_protected_pages($pages, $r) {
 	return $pages;
 }
 
-add_filter("get_pages", "ep_exclude_password_protected_pages", 10, 2);
+// Change the number of search results that are shown
+function change_wp_search_size($query) {
+	if ($query->is_search) {
+		$query->query_vars['posts_per_page'] = -1; // Show all search results
+	}
+	return $query;
+}
+
+add_filter('pre_get_posts', 'change_wp_search_size');
+
+add_filter('get_pages', 'ep_exclude_password_protected_pages', 10, 2);
 
 add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 

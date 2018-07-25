@@ -587,7 +587,13 @@ Home
 
 <!-- Show search results, if any -->
 <?php if (have_posts()) : ?>
-    <div class="search-results-title-text">Search results for query "<?php the_search_query(); ?>":</div>
+    <?php
+    $results = 0;
+    while (have_posts()) : the_post();
+      $results = $results + 1;
+    endwhile;
+    ?>
+    <div class="search-results-title-text"> <?php echo $results; ?> results found for query "<?php the_search_query(); ?>":</div>
 	<?php
 	while (have_posts()) : the_post(); ?>
 			<?php if (has_post_thumbnail()) { ?>
